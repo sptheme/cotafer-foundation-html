@@ -1,5 +1,5 @@
 # cotafer-foundation-html
-is a nonprofit that connects donors with grassroots projects around the world. Donate to charity and see your impact with regular updates.
+is HTML version for build website for a nonprofit that connects donors with grassroots projects around the world. Donate to charity and see your impact with regular updates.
 
 ## Basic Features
 
