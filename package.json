@@ -1,0 +1,42 @@
+{
+  "name": "cotafer-foundation-html",
+  "version": "1.0.0",
+  "description": "is a nonprofit that connects donors with grassroots projects around the world. Donate to charity and see your impact with regular updates.",
+  "main": "index.js",
+  "scripts": {
+    "build": "set NODE_ENV=production&& webpack --config webpack.pro.config.js",
+    "dev": "set NODE_ENV=development&& node dev.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sptheme/cotafer-foundation-html.git"
+  },
+  "keywords": [
+    "webpack",
+    "html",
+    "css",
+    "starter"
+  ],
+  "author": "Sopheak Peas",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "jquery": "^3.1.1",
+    "tether": "^1.3.7"
+  }
+}
