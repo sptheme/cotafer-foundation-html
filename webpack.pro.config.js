@@ -7,7 +7,7 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    vendor: ['tether', 'bootstrap'],
+    vendor: ['tether', 'font-awesome-loader', 'bootstrap'],
     theme: './src/scripts/index.js'
   },
   output: {
@@ -45,6 +45,14 @@ module.exports = {
         fallbackLoader: 'style-loader', loader: 'css-loader?minimize!sass-loader',
       }),
       include: path.resolve(__dirname, "src/styles/")
+    }, {
+      test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //loader: 'url-loader?limit=10000',
+      loader: 'url-loader',
+    },
+    {
+      test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+      loader: 'file-loader',
     }]
   }
 }

@@ -1,5 +1,59 @@
-// This is an empty scss file for your custom styles
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# TYPOGRAPHY
+# ELEMENTS
+# STRUCTURE AND LAYOUT
+# HEADER
 
-body {
-    background-color: #fff; //$brand-primary;
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# TYPOGRAPHY
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-montserrat;
+}
+
+/*--------------------------------------------------------------
+# ELEMENTS
+--------------------------------------------------------------*/
+a:hover {
+  color: $link-hover-color;
+}
+a:focus {
+  outline:0;
+}
+
+/*--------------------------------------------------------------
+# STRUCTURE AND LAYOUT
+--------------------------------------------------------------*/
+#page { overflow: hidden; }
+
+// Left-sidebar
+body.left-sidebar .content-area {
+  float:right;
+}
+
+/* Full-Width & Full-Screen */
+body.full-width .content-area,
+body.full-width .widget-area,
+body.full-screen .site-content .container {
+  float:none;
+  max-width: 100%;
+  width:100%;
+}
+
+
+
+
+/* For development only */
+.node-env {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #ff3333;
+  display: block;
+  padding: 0.5rem 1rem;
+  color:#fff;
 }
