@@ -1,3 +1,13 @@
+/*
+Theme Name: Cotafer foundation
+Theme URI: https://github.com/sptheme/cotafer-foundation-html
+Author: Sopheak
+Author URI: https://www.linkedin.com/in/sopheakpeas
+Description: A new awesome responsive theme to showcase nonprofit that connects donors with grassroots projects around the world.
+Version: 1.0.0
+*/
+
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -5,6 +15,8 @@
 # ELEMENTS
 # STRUCTURE AND LAYOUT
 # HEADER
+# FOOTER
+# WIDGETS
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -18,9 +30,6 @@ h1, h2, h3, h4, h5, h6,
 /*--------------------------------------------------------------
 # ELEMENTS
 --------------------------------------------------------------*/
-a:hover {
-  color: $link-hover-color;
-}
 a:focus {
   outline:0;
 }
@@ -44,6 +53,69 @@ body.full-screen .site-content .container {
   width:100%;
 }
 
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/
+.site-footer {
+  background: $light-brown;
+  font-size: 0.875em;
+  color:#fff;
+
+  a {
+    color: #fff;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.footer-inner,
+.footer-bottom-1,
+.footer-bottom-2 {
+  padding:1rem 0;
+}
+.footer-bottom-1 {
+  background: $dark-brown;
+}
+
+/*--------------------------------------------------------------
+# WIDGETS
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 30px;
+}
+
+.widget .widget-title {
+  font-size: 1.143em;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+  width: 100%;
+}
+
+/* Widgets list item */
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.widget ul.children {
+  margin-left: 20px;
+}
+
+/* widget-company-info */
+.widget-company-info {
+  img.footer-logo {
+    margin-bottom: 0.625em;
+  }
+}
 
 
 

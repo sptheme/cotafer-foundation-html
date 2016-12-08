@@ -33,9 +33,9 @@ $(function() {
         self.userModalSwitcher();
       });
 
-      self.config.$window.resize( function() {
+      /*self.config.$window.resize( function() {
         console.log('Resize is started!');
-      });
+      });*/
 
     },
 
