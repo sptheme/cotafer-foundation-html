@@ -28,15 +28,15 @@ $(function() {
       var self = this;
 
       // Run on document ready
-      self.config.$document.on( 'ready', function() {
-        console.log('Document is ready! 200px' + self.config.$mobileMenuBreakpoint);
+      self.config.$document.ready( function() {
+
+        // Mobile menu
+        self.menuToggle();
+
+        // User modal switcher
+        self.userModalSwitcher();
+
       });
-
-      // Mobile menu
-      self.menuToggle();
-
-      // User modal switcher
-      self.userModalSwitcher();
 
       self.config.$window.resize( function() {
         // Window width change
@@ -81,6 +81,13 @@ $(function() {
           $( '.sidr-overlay' ).on( 'click', function( event ) {
             event.preventDefault();
             $.sidr( 'close', 'sidr-mobile-menu' );
+          } );
+
+          // Close on resize
+          $(window).resize( function() {
+            if ( this.config.$windowWidth >= this.config.$mobileMenuBreakpoint ) {
+              $.sidr( 'close', 'sidr-mobile-menu' );
+            }
           } );
 
           $('.cf-menu-icon').addClass('is-clicked');
