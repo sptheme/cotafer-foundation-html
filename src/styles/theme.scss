@@ -1,5 +1,8 @@
 @import "theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
 @import "~bootstrap/scss/bootstrap";// <--------- Loads Bootstrap4.
 
+//Optional dependencies files
+@import "~sidr/src/scss/jquery.sidr.bare";
+
 // Any additional imported files //
 @import "custom";  // <--------- Thats where you can add your own design. Thats your part!

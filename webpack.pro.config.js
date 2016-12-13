@@ -7,7 +7,7 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    vendor: ['tether', 'font-awesome-loader', 'bootstrap'],
+    vendor: ['tether', 'font-awesome-loader', 'bootstrap', 'sidr/dist/jquery.sidr'],
     theme: './src/scripts/index.js'
   },
   output: {

@@ -10,6 +10,7 @@ module.exports = {
     'tether',
     'font-awesome-loader',
     'bootstrap',
+    'sidr/dist/jquery.sidr',
     './src/scripts/index.js',
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080'

@@ -17,8 +17,13 @@ Version: 1.0.0
 # HEADER
 # FOOTER
 # WIDGETS
+# COMPONENT
+  ## Mobile nav trigger
+  ## Mobile menu
 
+# DEVELOMENT
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # TYPOGRAPHY
 --------------------------------------------------------------*/
@@ -56,14 +61,57 @@ body.full-screen .site-content .container {
 /*--------------------------------------------------------------
 # HEADER
 --------------------------------------------------------------*/
+#header {
+  background:$dark-brown;
 
+  a {
+    color:#fff;
+  }
+
+  .site-branding {
+    padding:0;
+    padding-left:20px;
+  }
+
+  .site-branding h3 {
+    margin-bottom: 0;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .site-navigation .nav li a:hover {
+    color:$orange;
+  }
+
+  .site-tools {
+    font-size: 1.125em;
+
+    .cart-info {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #header {
+    .site-tools {
+      font-size: 85%;
+
+      .cart-info {
+        margin-top: 0;
+      }
+    }
+  }
+}
 
 /*--------------------------------------------------------------
 # FOOTER
 --------------------------------------------------------------*/
 .site-footer {
   background: $light-brown;
-  font-size: 0.875em;
+  font-size: 85%;
   color:#fff;
 
   a {
@@ -80,6 +128,13 @@ body.full-screen .site-content .container {
 }
 .footer-bottom-1 {
   background: $dark-brown;
+}
+
+/*--------------------------------------------------------------
+# CONTENT
+--------------------------------------------------------------*/
+.site-content {
+  padding: 1em 0;
 }
 
 /*--------------------------------------------------------------
@@ -117,8 +172,176 @@ body.full-screen .site-content .container {
   }
 }
 
+/*--------------------------------------------------------------
+# COMPONENT
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+## Mobile nav trigger
+--------------------------------------------------------------*/
 
+.cf-nav-trigger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: $dark-brown;
+
+  .cf-menu-text {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* hide the text on small devices */
+    display: none;
+  }
+  .cf-menu-icon {
+    /* this span is the central line of the menu icon */
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* these are the upper and lower lines in the menu icon */
+  }
+  .cf-menu-icon::before, .cf-menu-icon:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+    -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+    transition: transform .3s, top .3s, background-color 0s;
+  }
+  .cf-menu-icon::before {
+    top: -8px;
+  }
+  .cf-menu-icon::after {
+    top: 8px;
+  }
+  .cf-menu-icon.is-clicked {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .cf-menu-icon.is-clicked::before, .cf-menu-icon.is-clicked::after {
+    background-color: white;
+  }
+  .cf-menu-icon.is-clicked::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  .cf-menu-icon.is-clicked::after {
+    top: 0;
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .cf-nav-trigger {
+    width: 100px;
+    padding-left: 1em;
+    background-color: transparent;
+    height: 30px;
+    line-height: 30px;
+    right: 2.2em;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .cf-nav-trigger .cf-menu-text {
+    display: inline-block;
+  }
+  .cf-nav-trigger .cf-menu-icon {
+    left: auto;
+    right: 1em;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    -o-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+/*--------------------------------------------------------------
+## Mobile menu
+--------------------------------------------------------------*/
+.sidr {
+  font-size: 1.077em;
+  background: #262626;
+  color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+
+  a {
+    color: #BDBDBD;
+  }
+
+  a:hover,
+  .sidr-class-active a {
+    color:#fff;
+    text-decoration: none;
+  }
+
+  ul{
+    list-style: none;
+    padding-left:0;
+    margin-bottom:0;
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.15 );
+
+    li a {
+      padding: 0.5em 1.250em;
+      display: block;
+      position: relative;
+    }
+  }
+  ul:last-child {
+    border: none
+  }
+}
+
+.sidr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+
+/*--------------------------------------------------------------
+# DEVELOPMENT
+--------------------------------------------------------------*/
 /* For development only */
 .node-env {
   position: fixed;

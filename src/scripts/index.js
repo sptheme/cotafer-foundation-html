@@ -20,6 +20,7 @@ $(function() {
         $body                   : $( 'body' ),
         $viewportWidth          : '',
         $is_rtl                 : false,
+        $mobileMenuBreakpoint   : '992px',
       };
     },
 
@@ -28,15 +29,71 @@ $(function() {
 
       // Run on document ready
       self.config.$document.on( 'ready', function() {
-        console.log('Document is ready!');
-        // User modal switcher
-        self.userModalSwitcher();
+        console.log('Document is ready! 200px' + self.config.$mobileMenuBreakpoint);
       });
 
-      /*self.config.$window.resize( function() {
-        console.log('Resize is started!');
-      });*/
+      // Mobile menu
+      self.menuToggle();
 
+      // User modal switcher
+      self.userModalSwitcher();
+
+      self.config.$window.resize( function() {
+        // Window width change
+        if ( self.config.$window.width() != self.config.$windowWidth ) {
+          self.resizeUpdateConfig();
+        }
+      });
+
+      // On orientation change
+      self.config.$window.on( 'orientationchange',function() {
+        resizeUpdateConfig();
+      } );
+
+    },
+
+    /**
+     * Updates config whenever the window is resized
+     *
+     */
+    resizeUpdateConfig: function() {
+
+      // Update main configs
+      this.config.$windowHeight = this.config.$window.height();
+      this.config.$windowWidth  = this.config.$window.width();
+      this.config.$windowTop    = this.config.$window.scrollTop();
+
+    },
+
+    menuToggle: function() {
+      // Site navigation - Menu toggle
+      $('.cf-nav-trigger').sidr({
+        name: 'sidr-mobile-menu',
+        source: '#site-navigation', //#mobile-menu-alternative
+        side: 'left',
+        speed: 300,
+        onOpen: function() {
+          // Add dark overlay to content
+          $('#pager').append( '<div class="sidr-overlay"></div>' );
+          $( '.sidr-overlay' ).fadeIn( 300 );
+
+          // Close sidr when clicking on overlay
+          $( '.sidr-overlay' ).on( 'click', function( event ) {
+            event.preventDefault();
+            $.sidr( 'close', 'sidr-mobile-menu' );
+          } );
+
+          $('.cf-menu-icon').addClass('is-clicked');
+        },
+        onClose: function() {
+          $('.cf-menu-icon').removeClass('is-clicked');
+
+          // FadeOut overlay
+          $( '.sidr-overlay' ).fadeOut( 300, function() {
+            $( this ).remove();
+          } );
+        }
+      });
     },
 
     userModalSwitcher: function() {
