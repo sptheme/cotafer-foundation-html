@@ -59,6 +59,117 @@ body.full-screen .site-content .container {
 }
 
 /*--------------------------------------------------------------
+# SITE NAVIGATION
+--------------------------------------------------------------*/
+/* Superfish core */
+.sf-menu,
+.sf-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sf-menu {
+  ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 10001;
+  }
+  li:hover > ul,
+  li.sfHover > ul {
+    display: block
+  }
+  a {
+    display: block;
+    position: relative;
+  }
+  ul ul {
+    top: 0; left: 100%;
+  }
+  ul {
+    min-width: 140px;
+    *width: 140px;
+  }
+  a { zoom: 1 }
+  li {
+    position: relative;
+    white-space: nowrap;
+    *white-space: normal;
+  }
+  li:hover,
+  li.sfHover {
+    transition: none
+  }
+  .sf-mega {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+  }
+  li:hover > .sf-mega,
+  li.sfHover > .sf-mega {
+    display: block
+  }
+  ul img {
+    display: block;
+    float: none;
+    max-width: 100%;
+  }
+}
+
+/* Site-navigation */
+#site-navigation {
+
+  .nav .nav-link {
+    color: rgba(255, 255, 255,.7);
+  }
+  .nav .active>.nav-link,
+  .nav .nav-link:hover {
+    color: rgba($orange,1);
+  }
+  .nav .active>.nav-link {
+    border-bottom: 3px solid $orange;
+  }
+
+  .nav ul {
+    background: #fff;
+    border: 1px solid #eee;
+
+    ul {
+      margin-left: 0;
+      text-align: left;
+    }
+    li:first-child ul {
+      margin-top: 0;
+    }
+    li {
+      padding: 0;
+    }
+    a {
+      display: block;
+      float: none;
+      padding: 8px 12px;
+      height: auto;
+      margin: 0px;
+      border: 0px;
+      line-height: 1.4em;
+      color: #666;
+      font-size: 0.923em;
+      border-bottom: 1px solid #eee;
+    }
+    li:last-child > a {
+      border-bottom: none;
+    }
+    a:hover {
+      background: #f7f7f7;
+      text-decoration: none;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
 # HEADER
 --------------------------------------------------------------*/
 #header {

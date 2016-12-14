@@ -30,6 +30,9 @@ $(function() {
       // Run on document ready
       self.config.$document.ready( function() {
 
+        // Main navigation
+        self.superFish();
+
         // Mobile menu
         self.menuToggle();
 
@@ -65,11 +68,32 @@ $(function() {
 
     },
 
+    superFish: function() {
+
+      if ( ! $.fn.superfish ) {
+        return;
+      }
+
+      $( '#site-navigation ul.sf-menu' ).superfish( {
+        delay: 600,
+        animation: {
+          opacity: 'show'
+        },
+        animationOut: {
+          opacity: 'hide'
+        },
+        speed: 'fast',
+        speedOut: 'fast',
+        cssArrows: false,
+        disableHI: false
+      } );
+    },
+
     menuToggle: function() {
       // Site navigation - Menu toggle
       $('.cf-nav-trigger').sidr({
         name: 'sidr-mobile-menu',
-        source: '#site-navigation', //#mobile-menu-alternative
+        source: '#mobile-menu-alternative',
         side: 'left',
         speed: 300,
         onOpen: function() {

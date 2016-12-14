@@ -10,6 +10,8 @@ module.exports = {
     'tether',
     'font-awesome-loader',
     'bootstrap',
+    'jquery-hoverintent',
+    'superfish',
     'sidr/dist/jquery.sidr',
     './src/scripts/index.js',
     'webpack/hot/dev-server',
