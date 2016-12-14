@@ -7,8 +7,15 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    vendor: ['tether', 'font-awesome-loader', 'bootstrap', 'sidr/dist/jquery.sidr'],
-    theme: './src/scripts/index.js'
+    theme: './src/scripts/index.js',
+    vendor: [
+      'tether',
+      'font-awesome-loader',
+      'bootstrap',
+      'jquery-hoverintent',
+      'superfish',
+      'sidr/dist/jquery.sidr'
+    ]
   },
   output: {
     path: path.resolve(__dirname, "public/js/"), // the target directory for all output files
@@ -26,6 +33,9 @@ module.exports = {
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
       DEVELOPMENT: JSON.stringify(DEVELOPMENT)
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor'] // Specify the common bundle's name.
     })
   ],
   module: {
