@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Webpack 2.0 - Tutorial</title>
+	<title>Startup Template - Cotafer foundation</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,7 +27,7 @@
 
       <div class="site-branding navbar-brand">
         <h3 class="text-xs-center text-lg-left">
-          <a href="home.html" title="Cotafer" rel="home">
+          <a href="index.html" title="Cotafer" rel="home">
             <img src="images/logo-white.png" />
           </a>
         </h3>
@@ -36,7 +36,7 @@
       <div id="site-navigation" class="site-navigation hidden-md-down">
         <ul class="nav navbar-nav sf-menu">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CF Projects</a>
@@ -51,7 +51,7 @@
                     <a href="#">Become a donor</a>
                   </li>
                   <li>
-                    <a href="#">Become a partner</a>
+                    <a href="be-partner.html">Become a partner</a>
                   </li>
                 </ul>
             </li>
@@ -81,16 +81,19 @@
         <div id="primary" class="content-area col-md-8">
           <main id="main" class="site-main" role="main">
 
-            <h1>Starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project. All you get is this text and a mostly barebones HTML document.</p>
-            <h3>Manage layout</h3>
-            <p>You can manage layout by adding class into <strong>body</strong> tag by use one of these classes: </p>
-            <ul>
-              <li><i>(default: right-sidebar)</i></li>
-              <li><strong>left-sidebar</strong>: Float sidebar to left of primary content</li>
-              <li><strong>full-screen</strong>: Allow content's page display fullscreen base browser's size.</li>
-              <li><strong>full-width</strong>: Allow content's page display full-width base on .container's width</li>
-            </ul>
+            <h1 class="entry-title">Starter template</h1>
+
+            <div class="entry-content">
+              <p class="lead">Use this document as a way to quickly start any new project. All you get is this text and a mostly barebones HTML document.</p>
+              <h3>Manage layout</h3>
+              <p>You can manage layout by adding class into <strong>body</strong> tag by use one of these classes: </p>
+              <ul>
+                <li><i>(default: right-sidebar)</i></li>
+                <li><strong>left-sidebar</strong>: Float sidebar to left of primary content</li>
+                <li><strong>full-screen</strong>: Allow content's page display fullscreen base browser's size.</li>
+                <li><strong>full-width</strong>: Allow content's page display full-width base on .container's width</li>
+              </ul>
+            </div> <!-- .entry-conent -->
 
           </main> <!-- #main -->
         </div> <!-- #primary -->
@@ -196,7 +199,7 @@
   <nav id="mobile-menu-alternative" class="mobile-nav">
     <ul class="nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="#">CF Projects</a>
@@ -206,12 +209,12 @@
       </li>
     </ul>
 
-    <ul class="nav hidden-sm-up">
+    <ul class="nav">
       <li class="nav-item">
           <a class="nav-link" href="#">Become a Donor</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">Become a Partner</a>
+          <a class="nav-link" href="be-partner.html">Become a Partner</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="#">Login</a>
@@ -221,13 +224,12 @@
       </li>
     </ul>
 
-    <ul class="nav hidden-sm-up">
+    <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="#">Helps</a>
         </li>
     </ul>
-  </nav>
-  <!-- End Addon mobile menu -->
+  </nav> <!-- #mobile-menu-alternative -->
 
 </div> <!-- #pager -->
 

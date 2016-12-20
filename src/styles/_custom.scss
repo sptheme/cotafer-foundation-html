@@ -17,6 +17,8 @@ Version: 1.0.0
 # HEADER
 # FOOTER
 # WIDGETS
+# TEMPLATE PAGES
+  ## Application - be a partner
 # COMPONENT
   ## Mobile nav trigger
   ## Mobile menu
@@ -241,6 +243,13 @@ body.full-screen .site-content .container {
   background: $dark-brown;
 }
 
+.footer-widget {
+  .widget-title,
+  a:hover {
+    color: $orange;
+  }
+}
+
 /*--------------------------------------------------------------
 # CONTENT
 --------------------------------------------------------------*/
@@ -284,13 +293,85 @@ body.full-screen .site-content .container {
 }
 
 /*--------------------------------------------------------------
+# TEMPLATE PAGES
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Application - be a partner
+--------------------------------------------------------------*/
+.application-form {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  .form-group {
+    border-bottom: 1px solid rgba($grey,.7);
+  }
+
+  legend {
+    padding-top: 0;
+    color:$grey;
+  }
+
+  .text-muted {
+    color: rgba($grey,.5)!important;
+  }
+
+  .alert .fa {
+    font-size: 2em;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
 # COMPONENT
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+## Circle number
+--------------------------------------------------------------*/
+.circle-number {
+  counter-reset: circle-number; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  *list-style: decimal; /* Keep using default numbering for IE6/7 */
+  padding: 0;
+
+  li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+  }
+
+  li:before{
+    content: counter(circle-number);
+    counter-increment: circle-number;
+    position: absolute;
+    left: -.5em;
+    top: 0.3em;
+    color:#fff;
+    background: $green;
+    height: 2em;
+    width: 2em;
+    line-height: 1.5em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }
+
+  ol {
+    margin: 0 0 0 2em; /* Add some left margin for inner lists */
+  }
+
+}
+
+/*--------------------------------------------------------------
 ## Mobile nav trigger
 --------------------------------------------------------------*/
-
 .cf-nav-trigger {
   position: absolute;
   left: 0;
@@ -401,6 +482,10 @@ body.full-screen .site-content .container {
 /*--------------------------------------------------------------
 ## Mobile menu
 --------------------------------------------------------------*/
+#mobile-menu-alternative {
+  display: none;
+}
+
 .sidr {
   font-size: 1.077em;
   background: #262626;

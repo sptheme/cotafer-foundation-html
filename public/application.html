@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Application Start - Cotafer Foundation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- For development stage -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,400i,600" rel="stylesheet"> -->
+
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body class="full-width">
+
+  <div id="pager">
+    <header id="header" class="site-header masthead">
+      <div class="navbar">
+
+        <div id="mobile-menu" class="hidden-lg-up">
+          <a class="cf-nav-trigger" href="#">
+            <span class="cf-menu-text">Menu</span><span class="cf-menu-icon"></span>
+          </a>
+        </div> <!-- #mobile-menu -->
+
+        <div class="site-branding navbar-brand">
+          <h3 class="text-xs-center text-lg-left">
+            <a href="index.html" title="Cotafer" rel="home">
+              <img src="images/logo-white.png" />
+            </a>
+          </h3>
+        </div> <!-- .site-branding -->
+
+        <div id="site-navigation" class="site-navigation hidden-md-down">
+          <ul class="nav navbar-nav sf-menu">
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">CF Projects</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Partner Projects</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Membership</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">Become a donor</a>
+                    </li>
+                    <li>
+                      <a href="be-partner.html">Become a partner</a>
+                    </li>
+                  </ul>
+              </li>
+          </ul>
+        </div> <!-- .site-navigation -->
+
+        <div class="site-tools float-xs-right">
+          <ul class="nav nav-inline">
+            <li class="nav-item">
+              <a href="#">
+                <div class="cart-info">
+                  <span class="menucart-text hidden-md-down">Giving cart</span> <i class="fa fa-cart-plus menucart-icon" aria-hidden="true"></i> <span class="menucart-count">0</span></span>
+                </div> <!-- .cart-info -->
+              </a>
+            </li>
+            <li class="nav-item hidden-md-down"><a href="#signin-modal" data-toggle="modal"><i class="fa fa-user-o" aria-hidden="true"></i> Login/Register</a></li>
+          </ul>
+        </div> <!-- .site-tools -->
+
+      </div> <!-- .navbar -->
+
+    </header><!-- #header -->
+
+    <div id="content" class="site-content">
+      <div class="container">
+        <div class="row">
+
+          <div id="primary" class="content-area col-md-8">
+            <main id="main" class="site-main" role="main">
+
+            <header class="entery-header">
+              <h1 class="entry-title text-xs-center">Ready to be a partner with Cotafer Foundation?</h1>
+            </header><!-- /.entery-header -->
+
+            <div class="entry-content">
+              <form id="application-form" class="application-form">
+                <ol class="circle-number">
+                  <li>Submit an application. We vet each of our partners so we can confidently tell our corporate and individual donors they are giving to verified charities. <a href="application-info.html" title="Application information">See the list of documents that you will be asked to submit</a>.</li>
+                  <li>Create a project.Share detail about your work with potential donors, demonstrating how their own donation will make a difference.</li>
+                </ol>
+                <p>We know your time is valuable, so before you begin you application, we have a few questions to see if we are a good match:</p>
+
+                <!-- requirement #1 -->
+                <div class="form-group row">
+                  <legend class="col-form-legend col-sm-8 text-sm-right">Is your organization a registered charity, nonprofit, or NGO that is implementing a program?</legend>
+                  <div class="col-sm-4">
+                    <div class="form-check">
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="registeredNonProfit" id="registeredNonProfitTrue" value="true" checked>
+                        Yes
+                      </label>
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="registeredNonProfit" id="registeredNonProfitFalse" value="false">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- end requirement #1 -->
+
+                <!-- requirement #1.1 (show if requirement #1 say Yes) -->
+                <div class="form-group row">
+                  <legend class="col-form-legend col-sm-8 text-sm-right">Can you provide organizational documents in English? (Google translations are ok!)</legend>
+                  <div class="col-sm-4">
+                    <div class="form-check">
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="financialStatement" id="financialStatementTrue" value="true" checked>
+                        Yes
+                      </label>
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="financialStatement" id="financialStatementFalse" value="false">
+                        No
+                      </label>
+                    </div>
+                    <small id="financialStatementHelp" class="form-text text-muted"><a href="application-info.html" title="Application information">Click here</a> for more information</small>
+                  </div>
+                </div>
+                <!-- requirement #1.1 -->
+
+                <!-- requirement #1.2 (show if requirement #1 say No) -->
+                <div class="form-group row">
+                  <legend class="col-form-legend col-sm-8 text-sm-right">Is your organization fiscally-sponsored by a registered charity, nonprofit, or NGO?</legend>
+                  <div class="col-sm-4">
+                    <div class="form-check">
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="fiscallySponsered" id="fiscallySponseredTrue" value="true" checked>
+                        Yes
+                      </label>
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="fiscallySponsered" id="fiscallySponseredFalse" value="false">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- requirement #1.2 -->
+
+                <!-- requirement #2 (show if requirement #1.2 say Yes) -->
+                <div class="form-group row">
+                  <legend class="col-form-legend col-sm-8 text-sm-right">Can you mobilize your network to donate your project through the Cotafer Foundation platform?</legend>
+                  <div class="col-sm-4">
+                    <div class="form-check">
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="capableRasingMinimum" id="capableRasingMinimumTrue" value="true" checked>
+                        Yes
+                      </label>
+                      <label class="form-check-inline">
+                        <input type="radio" class="form-check-input" name="capableRasingMinimum" id="capableRasingMinimumFalse" value="false">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Alert message -->
+                <div class="text-xs-center">
+                  <div class="alert alert-danger">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <p><strong>Sorry</strong>, but Cotafer Foundation can only work with registered organizations that can provide organizational documents in English and who want to use online tools to mobilize their supporters.</p>
+                  </div>
+                  <div class="alert alert-success">
+                    <i class="fa fa-thumbs-up"></i>
+                    <h3><strong>Terrific!</strong> It looks like we can work together!</h3>
+                  </div>
+                </div>
+                <!-- End Alert message -->
+
+                <div class="text-xs-center">
+                  <button type="submit" class="btn btn-primary btn-lg">Continue</button>
+                </div>
+
+              </form> <!-- #application-form -->
+            </div> <!-- .entry-conent -->
+
+            </main> <!-- #main -->
+          </div> <!-- #primary -->
+
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- #content -->
+
+    <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="container">
+        <div class="row">
+
+          <div class="footer-widget widget widget-company-info col-md-6">
+            <img src="images/logo-white.png" class="footer-logo" alt="Learn about Cotafer foundation">
+            <p>Cotafer Foundation makes it easy and safe for you to give to local projects anywhere in the world, while providing nonprofits with the tools, training, and support they need to become more effective.</p>
+          </div> <!-- .footer-widget -->
+
+          <div class="footer-widget widget col-md-2 col-sm-4">
+            <h3 class="widget-title">Donor</h3>
+            <ul class="nav">
+              <li class="nav-item"><a href="#">Give to a projec</a></li>
+              <li class="nav-item"><a href="#">Donor benefit</a></li>
+              <li class="nav-item"><a href="#">Gift Cards</a></li>
+            </ul>
+          </div> <!-- .footer-widget -->
+
+          <div class="footer-widget widget col-md-2 col-sm-4">
+            <h3 class="widget-title">Partner</h3>
+            <ul class="nav">
+              <li class="nav-item"><a href="#">Become a partner</a></li>
+              <li class="nav-item"><a href="#">Submit projects</a></li>
+              <li class="nav-item"><a href="#">Feature + Benefit</a></li>
+            </ul>
+          </div> <!-- .footer-widget -->
+
+          <div class="footer-widget widget col-md-2 col-sm-4">
+            <h3 class="widget-title">Quick helps</h3>
+            <ul class="nav">
+              <li class="nav-item"><a href="#">About us</a></li>
+              <li class="nav-item"><a href="#">Meeting the team</a></li>
+              <li class="nav-item"><a href="#">Media center</a></li>
+            </ul>
+          </div> <!-- .footer-widget -->
+
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- #footer-inner -->
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-1">
+        <div class="container">
+          <div class="row">
+            <div class="partner-logo col-md-6 text-xs-center text-lg-left">
+              <ul class="nav nav-inline">
+                <li class="nav-item"><a href="#" title=""><img src="images/cnn.png" alt="CNN"></a></li>
+                <li class="nav-item"><a href="#" title=""><img src="images/the-washington-post.png" alt="The new york times"></a></li>
+                <li class="nav-item"><a href="#" title=""><img src="images/npr.png" alt="NPR"></a></li>
+                <li class="nav-item"><a href="#" title=""><img src="images/cotafer.png" alt="Cotafer"></a></li>
+              </ul>
+            </div> <!-- .partner-logo -->
+            <div class="awards-logo col-md-6 text-xs-center text-lg-right">
+              <ul class="nav nav-inline">
+                <li class="nav-item"><a href="#" title=""><img src="images/bbb-charity.png" alt="BBB Wise Giving Alliance"></a></li>
+                <li class="nav-item"><a href="#" title=""><img src="images/mcafee-secure.png" alt="Mcafee Secure"></a></li>
+                <li class="nav-item"><a href="#" title=""><img src="images/charity-navigator.png" alt="Charity navigator"></a></li>
+              </ul>
+            </div> <!-- .partner-logo -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </div> <!-- .footer-bottom-1 -->
+
+      <div class="footer-bottom-2">
+        <div class="container">
+          <div class="row">
+            <div class="footer-menu col-md-6 text-xs-center text-lg-left">
+              <ul class="nav nav-inline">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Press</a></li>
+                <li class="nav-item"><a href="#">Career</a></li>
+                <li class="nav-item"><a href="#">Contact us</a></li>
+                <li class="nav-item"><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+            <div role="contentinfo" class="copyright col-md-6 text-xs-center text-lg-right">
+              <p class="copyright">© Cotafer foundation 2016. All Right Reserve.</p>
+            </div> <!-- .copyright -->
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </div> <!-- .footer-bottom-2 -->
+
+    </div> <!-- .footer-bottom -->
+
+    </footer> <!-- .site-footer -->
+
+    <!-- Start Addon mobile menu -->
+    <nav id="mobile-menu-alternative" class="mobile-nav">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">CF Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Partner Projects</a>
+        </li>
+      </ul>
+
+      <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Become a Donor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="be-partner.html">Become a Partner</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+        </li>
+      </ul>
+
+      <ul class="nav">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Helps</a>
+          </li>
+      </ul>
+    </nav> <!-- #mobile-menu-alternative -->
+    <!-- End Addon mobile menu -->
+
+  </div> <!-- #pager -->
+
+  <div id="node-env"></div>
+
+  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="sign-fb-gplus text-xs-center">
+              <div class="row">
+                <div class="col-sm-6"><a href="#" title="Sign up with Facebook" class="btn btn-sm btn-block btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></div>
+                <div class="col-sm-6"><a href="#" title="Sign up with Google+" class="btn btn-sm btn-block btn-google-plus"><i class="fa fa-google-plus"></i> Google+</a></div>
+              </div> <!-- .row -->
+            </div>
+            <p class="text-xs-center">or with your email</p>
+            <form class="user-form-signup">
+                    <div class="form-group">
+                <label for="email" class="form-control-label">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                <label for="pass" class="form-control-label">Password:</label>
+                <input type="password" class="form-control" id="pass">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="agreeterm"> <small class="form-text text-muted">By creating an account, you're agreeing with our
+  <a href="#" title="">Terms and Conditions</a> and <a href="#" title="">Privacy Statement</a>.</small>
+                </label>
+                    </div>
+                    <div class="form-group text-xs-center">
+                      <button type="submit" class="btn btn-primary btn-block">Create an account</button>
+                    </div>
+                </form>
+            </div> <!-- .container-fluid -->
+        </div> <!-- .modal-body -->
+        <div class="modal-footer">
+          <p class="text-xs-center"><small>Already have account? Sign in to donate faster! <a id="signin-alternative" href="#signin-modal" data-toggle="modal">Sign in</a></small></p>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /#signup-modal -->
+
+  <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="sign-fb-gplus text-xs-center">
+              <div class="row">
+                <div class="col-sm-6"><a href="#" title="Sign in with Facebook" class="btn btn-sm btn-block btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></div>
+                <div class="col-sm-6"><a href="#" title="Sign in with Google+" class="btn btn-sm btn-block btn-google-plus"><i class="fa fa-google-plus"></i> Google+</a></div>
+              </div> <!-- .row -->
+            </div>
+            <p class="text-xs-center">or with your email</p>
+            <form class="user-form-signin">
+              <div class="form-group">
+                <label for="email" class="form-control-label">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="your email address">
+                    </div>
+                    <div class="form-group">
+                <label for="pass" class="form-control-label">Password:</label>
+                <input type="password" class="form-control" id="pass">
+                <a href="#" class="text-xs-right d-block" title=""><small class="form-text text-muted">Forgot password</small></a>
+                    </div>
+                    <div class="form-group text-xs-center">
+                      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                </form>
+            </div> <!-- .container-fluid -->
+        </div> <!-- .modal-body -->
+        <div class="modal-footer">
+          <p class="text-xs-center"><small>Not a member yet? <a id="signup-alternative" href="#signup-modal" data-toggle="modal">Create account</a></small></p>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /#signin-modal -->
+
+  <script type="text/javascript" src="js/vendor.min.js"></script>
+  <script type="text/javascript" src="js/theme.min.js"></script>
+
+</body>
+</html>
