@@ -20,6 +20,8 @@ Version: 1.0.0
 # TEMPLATE PAGES
   ## Application - be a partner
 # COMPONENT
+  ## Circle number
+  ## Socials
   ## Mobile nav trigger
   ## Mobile menu
 
@@ -367,6 +369,33 @@ body.full-screen .site-content .container {
     margin: 0 0 0 2em; /* Add some left margin for inner lists */
   }
 
+}
+
+/*--------------------------------------------------------------
+## Socials
+--------------------------------------------------------------*/
+/* # Socials button */
+.btn-facebook {
+  background: #43549a;
+  color:#ffffff;
+}
+.btn-facebook:hover {
+  background: #3f4c8e;
+}
+.btn-google-plus {
+  background: #e24c3b;
+  color:#ffffff;
+}
+.btn-google-plus:hover {
+  background: #c64133;
+}
+.btn-facebook, .btn-facebook:hover,
+.btn-google-plus, .btn-google-plus:hover {
+  color:#ffffff;
+}
+.btn-facebook,
+.btn-google-plus {
+  margin-bottom: 1em;
 }
 
 /*--------------------------------------------------------------

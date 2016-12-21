@@ -108,6 +108,8 @@
     </div> <!-- .container -->
   </div> <!-- #content -->
 
+  <h2><%- include('./view/hyperlink') %></h2>
+
   <footer id="footer" class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="container">
@@ -258,8 +260,9 @@
                   </div>
                   <div class="form-group">
                     <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="agreeterm"> <small class="form-text text-muted">By creating an account, you're agreeing with our
-<a href="#" title="">Terms and Conditions</a> and <a href="#" title="">Privacy Statement</a>.</small>
+                    <input class="form-check-input" type="checkbox" name="agreeterm">
+                    <small class="text-muted align-top">By creating an account, you're agreeing with our
+<a href="#" class="align-top">Terms and Conditions</a> and <a href="#" class="align-top">Privacy Statement</a>.</small>
               </label>
                   </div>
                   <div class="form-group text-xs-center">
@@ -278,6 +281,9 @@
 <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-xs-center">Sign in with</h4>
+      </div>
       <div class="modal-body">
         <div class="container-fluid">
           <div class="sign-fb-gplus text-xs-center">
@@ -286,7 +292,10 @@
               <div class="col-sm-6"><a href="#" title="Sign in with Google+" class="btn btn-sm btn-block btn-google-plus"><i class="fa fa-google-plus"></i> Google+</a></div>
             </div> <!-- .row -->
           </div>
-          <p class="text-xs-center">or with your email</p>
+          <div class="text-muted text-xs-center">
+            <small>or</small>
+            <p>with your email</p>
+          </div>
           <form class="user-form-signin">
             <div class="form-group">
               <label for="email" class="form-control-label">Email Address:</label>
@@ -295,7 +304,7 @@
                   <div class="form-group">
               <label for="pass" class="form-control-label">Password:</label>
               <input type="password" class="form-control" id="pass">
-              <a href="#" class="text-xs-right d-block" title=""><small class="form-text text-muted">Forgot password</small></a>
+              <a href="forgot-password.html" class="text-xs-right d-block" title=""><small class="form-text text-muted">Forgot password</small></a>
                   </div>
                   <div class="form-group text-xs-center">
                     <button type="submit" class="btn btn-primary btn-block">Sign in</button>
@@ -304,7 +313,7 @@
           </div> <!-- .container-fluid -->
       </div> <!-- .modal-body -->
       <div class="modal-footer">
-        <p class="text-xs-center"><small>Not a member yet? <a id="signup-alternative" href="#signup-modal" data-toggle="modal">Create account</a></small></p>
+        <div class="text-xs-center"><small>Not a member yet? <a id="signup-alternative" href="#signup-modal" data-toggle="modal">Create account</a></small></div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
