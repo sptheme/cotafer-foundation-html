@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+  <title>About page</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,400i,600" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet"></head>
+<body>
+
+<div id="pager">
+
+
+  <div id="content" class="site-content">
+    <div class="container">
+      <div class="row">
+
+        <h1>Custom template</h1>
+
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #content -->
+
+
+</div> <!-- #pager -->
+
+<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-xs-center">Sign in with</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="sign-fb-gplus text-xs-center">
+            <div class="row">
+              <div class="col-sm-6"><a href="#" title="Sign in with Facebook" class="btn btn-sm btn-block btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></div>
+              <div class="col-sm-6"><a href="#" title="Sign in with Google+" class="btn btn-sm btn-block btn-google-plus"><i class="fa fa-google-plus"></i> Google+</a></div>
+            </div> <!-- .row -->
+          </div>
+          <div class="text-muted text-xs-center">
+            <small>or</small>
+            <p>with your email</p>
+          </div>
+          <form class="user-form-signin">
+            <div class="form-group">
+              <label for="email" class="form-control-label">Email Address:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="your email address">
+                  </div>
+                  <div class="form-group">
+              <label for="pass" class="form-control-label">Password:</label>
+              <input type="password" class="form-control" id="pass">
+              <a href="forgot-password.html" class="text-xs-right d-block" title=""><small class="form-text text-muted">Forgot password</small></a>
+                  </div>
+                  <div class="form-group text-xs-center">
+                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  </div>
+              </form>
+          </div> <!-- .container-fluid -->
+      </div> <!-- .modal-body -->
+      <div class="modal-footer">
+        <div class="text-xs-center"><small>Not a member yet? <a id="signup-alternative" href="#signup-modal" data-toggle="modal">Create account</a></small></div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /#signin-modal -->
+
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="sign-fb-gplus text-xs-center">
+            <div class="row">
+              <div class="col-sm-6"><a href="#" title="Sign up with Facebook" class="btn btn-sm btn-block btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></div>
+              <div class="col-sm-6"><a href="#" title="Sign up with Google+" class="btn btn-sm btn-block btn-google-plus"><i class="fa fa-google-plus"></i> Google+</a></div>
+            </div> <!-- .row -->
+          </div>
+          <p class="text-xs-center">or with your email</p>
+          <form class="user-form-signup">
+                  <div class="form-group">
+              <label for="email" class="form-control-label">Email Address:</label>
+              <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                  <div class="form-group">
+              <label for="pass" class="form-control-label">Password:</label>
+              <input type="password" class="form-control" id="pass">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="agreeterm">
+                    <small class="text-muted align-top">By creating an account, you're agreeing with our
+<a href="#" class="align-top">Terms and Conditions</a> and <a href="#" class="align-top">Privacy Statement</a>.</small>
+              </label>
+                  </div>
+                  <div class="form-group text-xs-center">
+                    <button type="submit" class="btn btn-primary btn-block">Create an account</button>
+                  </div>
+              </form>
+          </div> <!-- .container-fluid -->
+      </div> <!-- .modal-body -->
+      <div class="modal-footer">
+        <p class="text-xs-center"><small>Already have account? Sign in to donate faster! <a id="signin-alternative" href="#signin-modal" data-toggle="modal">Sign in</a></small></p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /#signup-modal -->
+
+<script type="text/javascript" src="js/vendor.min.js"></script><script type="text/javascript" src="js/theme.min.js"></script></body>
+</html>

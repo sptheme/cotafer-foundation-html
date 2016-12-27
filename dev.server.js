@@ -7,8 +7,7 @@ var compiler = webpack(config);
 var server = new WebpackDevServer(compiler, {
 	hot: true,
 	filename: config.output.filename,
-	contentBase: path.join(__dirname, "public"), //Tell the server where to serve content from
-	publicPath: config.output.publicPath,
+	contentBase: config.output.path, //Tell the server where to serve content from
 	stats:{
 		colors: true
 	}

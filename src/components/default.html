@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./partials/meta-tag.html') %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%= require('html-loader!./partials/g-fonts.html') %>
+</head>
+<body>
+
+<div id="pager">
+
+
+  <div id="content" class="site-content">
+    <div class="container">
+      <div class="row">
+
+        <h1>Custom template</h1>
+
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #content -->
+
+
+</div> <!-- #pager -->
+
+<%= require('html-loader!./partials/signin-modal.html') %>
+<%= require('html-loader!./partials/signup-modal.html') %>
+</body>
+</html>
