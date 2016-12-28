@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./partials/meta-tag.html') %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%= require('html-loader!./partials/g-fonts.html') %>
+</head>
+<body>
+
+<div id="pager">
+
+  <header id="header" class="site-header masthead">
+    <div class="site-header-inner navbar">
+      <%= require('html-loader!./partials/header/header-menu-mobile-icon.html') %>
+      <%= require('html-loader!./partials/header/header-logo.html') %>
+      <%= require('html-loader!./partials/header/header-menu.html') %>
+      <%= require('html-loader!./partials/header/header-site-tools.html') %>
+    </div> <!-- .site-header-inner -->
+  </header> <!-- #header -->
+
+  <div id="content" class="site-content">
+    <div class="container">
+      <div class="row">
+
+        <h1>Custom template</h1>
+
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #content -->
+
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <%= require('html-loader!./partials/footer/footer-widgets.html') %>
+      <%= require('html-loader!./partials/footer/footer-bottom.html') %>
+    </div> <!-- .footer-inner -->
+  </footer> <!-- #footer -->
+
+  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+
+</div> <!-- #pager -->
+
+  <%= require('html-loader!./partials/signin-modal.html') %>
+  <%= require('html-loader!./partials/signup-modal.html') %>
+
+</body>
+</html>

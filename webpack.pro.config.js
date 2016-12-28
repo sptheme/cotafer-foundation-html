@@ -19,7 +19,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, "public/"),
+    path: path.resolve(__dirname, 'public/'),
     filename: 'js/[name].min.js'
   },
 
@@ -39,11 +39,32 @@ module.exports = {
         }),
         include: path.resolve(__dirname, "src/styles/")
       },
-      { test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?name=[name].[ext]&publicPath=fonts/&emitFile=false' },
-      { test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/, loader: 'file-loader?name=[name].[ext]&publicPath=fonts/&emitFile=false' },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+        query: {
+          name: '[name].[ext]',
+          publicPath: 'fonts/',
+          outputPath: path.resolve(__dirname, 'public/fonts') // Not working file-loader v0.9.0
+        }
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        loader: 'file-loader',
+        query: {
+          name: '[name].[ext]',
+          publicPath: 'fonts/',
+          outputPath: path.resolve(__dirname, 'public/fonts') // Not working file-loader v0.9.0
+        }
+      },
       {
         test: /\.(jpg|png)$/,
-        loader: 'file-loader?name=[name].[ext]&publicPath=images/&emitFile=false'
+        loader: 'file-loader',
+        query: {
+          name: '[name].[ext]',
+          publicPath: 'images/',
+          outputPath: path.resolve(__dirname, 'public/images') // Not working file-loader v0.9.0
+        }
       }
     ]
   },
@@ -59,7 +80,7 @@ module.exports = {
     new HtmlWebpackPlugin({  // Also generate a about.html
       title: 'About page',
       filename: 'about.html',
-      template: 'src/components/default.html'
+      template: 'src/default.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
