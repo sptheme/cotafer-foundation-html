@@ -157,8 +157,10 @@ $(function() {
 if (DEVELOPMENT) {
   var messages = require('./messages');
 
-  var app = document.getElementById('node-env');
+  var app = document.createElement('node-env');
   app.innerHTML = '<small class="node-env">' + messages.mode + ': ' + DEVELOPMENT + '</small>';
+  document.body.appendChild(app);
+
 
 	if (module.hot) {
 		module.hot.accept();

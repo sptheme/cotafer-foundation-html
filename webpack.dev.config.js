@@ -19,8 +19,8 @@ module.exports = {
     './src/scripts/index.js'
   ],
   output: {
-    path: path.resolve(__dirname, "public/js/"), // the target directory for all output files
-    filename: 'theme.min.js'
+    path: path.resolve(__dirname, 'public/'), // the target directory for all output files
+    filename: 'js/theme.min.js'
   },
 
   module: {
@@ -32,10 +32,20 @@ module.exports = {
       test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //loader: 'url-loader?limit=10000',
       loader: 'url-loader',
+      query: {
+        emitFile: false
+      }
     },
     {
       test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
       loader: 'file-loader',
+      query: {
+        emitFile: false
+      }
+    },
+    {
+      test: /\.(jpg|png)$/,
+      loader: 'file-loader'
     }]
   },
 
@@ -50,7 +60,7 @@ module.exports = {
     new HtmlWebpackPlugin({  // Also generate a about.html
       title: 'About page',
       filename: 'about.html',
-      template: 'partials/home.html'
+      template: 'src/default.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
