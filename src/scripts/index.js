@@ -39,6 +39,9 @@ $(function() {
         // User modal switcher
         self.userModalSwitcher();
 
+        // User modal in mobile menu
+        //self.userModalMobile();
+
       });
 
       self.config.$window.resize( function() {
@@ -101,8 +104,8 @@ $(function() {
           $('#pager').append( '<div class="sidr-overlay"></div>' );
           $( '.sidr-overlay' ).fadeIn( 300 );
 
-          // Close sidr when clicking on overlay
-          $( '.sidr-overlay' ).on( 'click', function( event ) {
+          // Close sidr when clicking on overlay, signin or signup
+          $( '.sidr-overlay, #sidr-id-signin-menu-mobile-alt, #sidr-id-signup-menu-mobile-alt' ).on( 'click', function( event ) {
             event.preventDefault();
             $.sidr( 'close', 'sidr-mobile-menu' );
           } );
@@ -135,7 +138,6 @@ $(function() {
         switchSignup.click( function( event ) {
           event.preventDefault();
           $('#signin-modal').modal('toggle');
-          console.log('signup modal is opened!');
         });
       }
 
@@ -143,10 +145,10 @@ $(function() {
         switchSignin.click( function( event ) {
           event.preventDefault();
           $('#signup-modal').modal('toggle');
-          console.log('signin modal is opened!');
         });
       }
     }
+
   }
 
   cfTheme.init();

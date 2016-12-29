@@ -49,8 +49,10 @@ a:focus {
 #page { overflow: hidden; }
 
 // Left-sidebar
-body.left-sidebar .content-area {
-  float:right;
+body.left-sidebar {
+  .content-area {
+    float:right;
+  }
 }
 
 /* Full-Width & Full-Screen */
@@ -561,7 +563,7 @@ body.full-screen .site-content .container {
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.6);
-  z-index: 9999;
+  z-index: 999;
 }
 
 /*--------------------------------------------------------------
