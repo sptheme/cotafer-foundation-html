@@ -15,15 +15,25 @@ Version: 1.0.0
 # ELEMENTS
 # STRUCTURE AND LAYOUT
 # HEADER
-# FOOTER
 # WIDGETS
+# CONTENT
+  ## Meta post
+  ## Single post
+  ## Related post
+# FOOTER
 # TEMPLATE PAGES
   ## Application - be a partner
 # COMPONENT
+  ## Theme heading
   ## Circle number
   ## Socials
   ## Mobile nav trigger
   ## Mobile menu
+  ## Goal progress
+  ## Organization communication line
+  ## Contact person
+  ## Post Thumbnail
+
 
 # DEVELOMENT
 --------------------------------------------------------------*/
@@ -224,52 +234,16 @@ body.full-screen .site-content .container {
 }
 
 /*--------------------------------------------------------------
-# FOOTER
---------------------------------------------------------------*/
-.site-footer {
-  background: $light-brown;
-  font-size: 85%;
-  color:#fff;
-
-  a {
-    color: #fff;
-  }
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-.footer-inner,
-.footer-bottom-1,
-.footer-bottom-2 {
-  padding:1rem 0;
-}
-.footer-bottom-1 {
-  background: $dark-brown;
-}
-
-.footer-widget {
-  .widget-title,
-  a:hover {
-    color: $orange;
-  }
-}
-
-/*--------------------------------------------------------------
-# CONTENT
---------------------------------------------------------------*/
-.site-content {
-  padding: 1em 0;
-}
-
-/*--------------------------------------------------------------
 # WIDGETS
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 30px;
+  border: 1px solid rgba($gray, 0.3);
+  padding: 1em;
+  margin: 0 0 2em;
 }
 
 .widget .widget-title {
-  font-size: 1.143em;
+  font-size: 1.500em;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -297,6 +271,133 @@ body.full-screen .site-content .container {
 }
 
 /*--------------------------------------------------------------
+# CONTENT
+--------------------------------------------------------------*/
+.site-content {
+  padding: 1em 0;
+}
+
+.main {
+  ul, ol {
+    padding-left: 1.5em;
+  }
+}
+
+.entry-title {
+  display: block;
+  font-size: 2em;
+  margin: 0 0 5px;
+}
+
+/*--------------------------------------------------------------
+## Meta post
+--------------------------------------------------------------*/
+ul.meta {
+  overflow: hidden;
+  font-size: 0.923em;
+  color: rgba($gray,.9);
+  list-style: none;
+  margin: 0 0 10px;
+  padding-left:0!important;
+
+  li {
+    float: left;
+    margin: 0 20px 5px 0;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  li .fa {
+    margin-right: 8px;
+  }
+
+  a {
+    color: rgba($gray,.9);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  time {
+    display: inline;
+  }
+}
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+.single-post {
+  .single-post-header,
+  .post-media,
+  .meta,
+  .single-post-content {
+    margin-bottom: 1.5em;
+  }
+}
+
+/*--------------------------------------------------------------
+## Related post
+--------------------------------------------------------------*/
+.related-posts {
+  background: #fafafa;
+  padding:$spacer;
+}
+
+.related-post {
+  .goal-process,
+  ul.meta {
+    font-size: 0.875em;
+  }
+  progress {
+    height: 0.500em;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/
+.site-footer {
+  background: $light-brown;
+  font-size: 85%;
+  color:#fff;
+
+  a {
+    color: #fff;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.footer-inner,
+.footer-bottom-1,
+.footer-bottom-2 {
+  padding:1rem 0;
+}
+.footer-bottom-1 {
+  background: $dark-brown;
+}
+
+.footer-widget {
+  border:none;
+
+  .widget-title {
+    font-size:1.143em;
+  }
+
+  .widget-title,
+  a:hover {
+    color: $orange;
+  }
+}
+
+
+/*--------------------------------------------------------------
 # TEMPLATE PAGES
 --------------------------------------------------------------*/
 
@@ -309,16 +410,16 @@ body.full-screen .site-content .container {
   margin-right: auto;
 
   .form-group {
-    border-bottom: 1px solid rgba($grey,.7);
+    border-bottom: 1px solid rgba($gray,.7);
   }
 
   legend {
     padding-top: 0;
-    color:$grey;
+    color:$gray;
   }
 
   .text-muted {
-    color: rgba($grey,.5)!important;
+    color: rgba($gray,.5)!important;
   }
 
   .alert .fa {
@@ -331,6 +432,37 @@ body.full-screen .site-content .container {
 /*--------------------------------------------------------------
 # COMPONENT
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Theme heading
+--------------------------------------------------------------*/
+.theme-heading {
+  height: auto;
+  top: auto !important;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px;
+  overflow: hidden;
+  position: relative;
+
+  span.text {
+    display: inline-block;
+    max-width: 90%;
+    position: relative;
+  }
+
+  span.text:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    border-bottom: solid 1px #eee;
+    left: 100%;
+    width: 9999px;
+    margin-top: -1px;
+    margin-left: 15px;
+  }
+}
 
 /*--------------------------------------------------------------
 ## Circle number
@@ -565,6 +697,103 @@ body.full-screen .site-content .container {
   background: rgba(0,0,0,0.6);
   z-index: 999;
 }
+
+/*--------------------------------------------------------------
+## Goal progress
+--------------------------------------------------------------*/
+.goal-process {
+  margin-bottom: 1em;
+
+  .raised,
+  .goal {
+    display: inline-block;
+    font-size: 0.875em;
+  }
+  .raised strong,
+  .goal strong {
+    font-size: 1.429em;
+  }
+  .raised strong {
+    color:$orange;
+  }
+  .goal strong {
+    color:$green;
+  }
+
+  .progress-bar {
+    background:rgba($gray,.3);
+    padding: 0.5em;
+    margin-bottom: 0.313em;
+  }
+  .progress {
+    margin-bottom: 0;
+  }
+
+  .goal-meta {
+    font-size: 0.813em;
+    color: $gray;
+  }
+}
+
+/*--------------------------------------------------------------
+## Organization communication line
+--------------------------------------------------------------*/
+.org-comm {
+  margin-bottom: 1em;
+
+  h5.org-name {
+    font-size: 1.125em;
+  }
+  ul {
+    font-size: 0.875em;
+
+    span.attr {
+      color:$dark-brown;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+## Contact person
+--------------------------------------------------------------*/
+.contact-person {
+  .project-leader {
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  address {
+    font-size: 0.813em;
+  }
+}
+
+/*--------------------------------------------------------------
+## Post Thumbnail
+--------------------------------------------------------------*/
+.post-thumbnail-wrap {
+
+  .caption-wrap {
+    background: #FAFAFA;
+    border-right: 20px solid #F6F6F6;
+    border-bottom: 20px solid #F6F6F6;
+    border-left: 20px solid #F6F6F6;
+    padding: $spacer;
+
+    h4 {
+      font-size: 1.250em;
+
+      a {
+        color:$gray-dark;
+      }
+      a:hover {
+        text-decoration: none;
+        color:$orange;
+      }
+    }
+  }
+
+}
+
+
 
 /*--------------------------------------------------------------
 # DEVELOPMENT

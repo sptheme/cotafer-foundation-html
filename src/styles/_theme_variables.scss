@@ -5,16 +5,20 @@
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
-$brand-primary:         #3f51b5; //#3f51b5 #ff6d5a
-
 // Color
-$grey: #9E9E9E;
+$gray: #9E9E9E;
 $dark-brown: #461e21;
 $light-brown: #52282b;
-$orange: #e83f2e;
-$green: #0ea77b;
+$orange: #ec1c33;
+$green: #29af8a;
+
+$brand-primary: $dark-brown;
 
 // Typography
 $font-family-montserrat: 'Montserrat', sans-serif;
 $font-family-open-sans: 'Open Sans', sans-serif;
 $font-family-base: $font-family-open-sans;
+
+// Links
+
+$link-hover-color: $orange;

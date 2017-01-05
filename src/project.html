@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./partials/meta-tag.html') %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%= require('html-loader!./partials/g-fonts.html') %>
+</head>
+<body>
+
+<div id="pager">
+
+  <header id="header" class="site-header masthead">
+    <div class="site-header-inner navbar">
+      <%= require('html-loader!./partials/header/header-menu-mobile-icon.html') %>
+      <%= require('html-loader!./partials/header/header-logo.html') %>
+      <%= require('html-loader!./partials/header/header-menu.html') %>
+      <%= require('html-loader!./partials/header/header-site-tools.html') %>
+    </div> <!-- .site-header-inner -->
+  </header> <!-- #header -->
+
+  <div id="content" class="site-content">
+    <div class="container">
+      <div class="row">
+
+        <div id="primary" class="content-area col-md-8">
+          <main id="main" class="site-main" role="main">
+
+            <article class="single-post">
+              <header class="single-post-header">
+                <h1 class="single-post-title">Help Destitute Moms with AIDs Care for Their Kids</h1>
+                <ul class="meta">
+                  <li class="meta-location">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <a href="#">Cambodia</a>
+                  </li>
+                  <li class="meta-category">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                    <a href="#">Education</a>,
+                    <a href="#">Children</a>,
+                    <a href="#">Headlines</a>
+                  </li>
+                  <li class="meta-id">
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <span>Project #3343</span>
+                  </li>
+                </ul> <!-- .meta -->
+              </header><!-- .project-single-header -->
+
+              <div class="post-media">
+                <img src="images/project-image.jpg" class="img-fluid">
+              </div> <!-- .post-media -->
+
+              <div class="theme-heading">
+                <span class="text">Story</span>
+              </div> <!-- .theme-heading -->
+
+              <div class="single-post-content">
+                <p>Abigail and Rusty are inseparable. Olivia needs to escape abuse from her husband in Poland and flee home to the USA. She doesn't have enough money to get them all home and leaving Rusty behind would break Abigail's heart. With your support we can get Olivia, Abigail and Rusty together.</p>
+                <h5>Challenge</h5>
+                <p>American women fleeing abuse with their children and pets rarely have access to the funds they need to escape home. With this project we will be able to fly Olivia home with Abigail and Rusty.</p>
+                <h5>Solution</h5>
+                <p>We will be able to purchase airline tickets to get Abigail and Olivia home and the necessary vet certifications and fees to bring Rusty home with them. As with most American women, children and pets fleeing home for safety, they will be able to live with Olivia's parents in the USA.</p>
+              </div> <!-- .entry -->
+            </article> <!-- .project-single-article -->
+
+          </main> <!-- #main -->
+        </div> <!-- #primary -->
+
+        <aside id="secondary" class="sidebar widget-area col-md-4" role="complementary">
+
+          <div class="widget widget-project-raised">
+            <div class="goal-process">
+              <div class="raised"><strong>$1,225,936</strong> Raised of</div>
+              <div class="goal"><strong>$2,000,000</strong> Goal</div>
+
+              <div class="progress-bar rounded">
+                <progress class="progress progress-success progress-animated" value="75" max="100"></progress>
+              </div>
+
+              <div class="goal-meta row">
+                <div class="donors col-sm-4 text-xs-center"><strong>711</strong> donations</div>
+                <div class="expired col-sm-4 text-xs-center"><strong>72</strong> days left</div>
+                <div class="remained col-sm-4 text-xs-center"><strong>$774,064</strong> to go</div>
+              </div> <!-- .row -->
+            </div> <!-- .goal-progress -->
+            <a href="#" class="btn btn-primary btn-block">Donate</a>
+
+          </div> <!-- .widget -->
+
+          <div class="widget widget-org-comm">
+            <h4 class="widget-title">Organiztion Information</h4>
+            <div class="org-comm">
+              <h5 class="org-name"><a href="#">Cotafer Foundation</a></h5>
+              <ul>
+                <li><span class="attr">Location:</span> Phnom Penh - CAMBODIA</li>
+                <li><span class="attr">Website:</span> <a href="http://www.kasumisou.com" target="_blank">http://www.cotafer-foundation.com</a></li>
+              </ul>
+            </div>
+            <div class="contact-person row">
+              <div class="col-sm-2 col-md-3">
+                <a href="#"><img class="img-fluid" src="images/project-leader.jpg"></a>
+              </div>
+              <div class="col-sm-10 col-md-9">
+                <h6 class="project-leader">Project Leader</h6>
+                <strong>Britt Lake</strong>
+                <address>Phnom Penh. Cambodia</address>
+              </div>
+            </div><!-- .row -->
+          </div> <!-- .widget -->
+
+        </aside> <!-- .widget-area -->
+
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+
+    <div class="related-posts">
+      <div class="container">
+        <div class="theme-heading">
+          <span class="text">Related Projects</span>
+        </div> <!-- .theme-heading -->
+        <div class="row">
+
+          <article class="related-post col-md-4">
+            <div class="post-thumbnail-wrap">
+              <img src="images/related-project-1.jpg" class="img-fluid">
+              <div class="caption-wrap">
+                <ul class="meta">
+                  <li class="meta-location">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <a href="#">Cambodia</a>
+                  </li>
+                  <li class="meta-category">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                    <a href="#">Women and Girls</a>
+                  </li>
+                </ul>
+                <h4><a href="#">Empower and Educate 100 Cambodian girls and boys</a></h4>
+                <div class="goal-process">
+                  <div class="raised"><strong>$1,510</strong> Raised of</div>
+                  <div class="goal"><strong>$4,500</strong> Goal</div>
+                  <progress class="progress progress-success progress-animated" value="75" max="100"></progress>
+
+                  <div class="goal-meta row">
+                    <div class="donors col-sm-4 text-xs-center"><strong>25</strong> donations</div>
+                    <div class="expired col-sm-4 text-xs-center"><strong>12</strong> days left</div>
+                    <div class="remained col-sm-4 text-xs-center"><strong>$2,990</strong> to go</div>
+                  </div> <!-- .row -->
+                </div> <!-- .goal-progress -->
+                <a href="#" class="btn btn-primary btn-block">Donate</a>
+              </div>
+            </div> <!-- .post-thumbnail-wrap -->
+          </article> <!-- .related-post -->
+
+          <article class="related-post col-md-4">
+            <div class="post-thumbnail-wrap">
+              <img src="images/related-project-1.jpg" class="img-fluid">
+              <div class="caption-wrap">
+                <ul class="meta">
+                  <li class="meta-location">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <a href="#">Cambodia</a>
+                  </li>
+                  <li class="meta-category">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                    <a href="#">Children</a>
+                  </li>
+                </ul>
+                <h4><a href="#">Provide Preschool Class to 10 Kids in Cambodia</a></h4>
+                <div class="goal-process">
+                  <div class="raised"><strong>$255</strong> Raised of</div>
+                  <div class="goal"><strong>$750</strong> Goal</div>
+                  <progress class="progress progress-success progress-animated" value="40" max="100"></progress>
+
+                  <div class="goal-meta row">
+                    <div class="donors col-sm-4 text-xs-center"><strong>6</strong> donations</div>
+                    <div class="expired col-sm-4 text-xs-center"><strong>43</strong> days left</div>
+                    <div class="remained col-sm-4 text-xs-center"><strong>$495</strong> to go</div>
+                  </div> <!-- .row -->
+                </div> <!-- .goal-progress -->
+                <a href="#" class="btn btn-primary btn-block">Donate</a>
+              </div>
+            </div> <!-- .post-thumbnail-wrap -->
+          </article> <!-- .related-post -->
+
+          <article class="related-post col-md-4">
+            <div class="post-thumbnail-wrap">
+              <img src="images/related-project-1.jpg" class="img-fluid">
+              <div class="caption-wrap">
+                <ul class="meta">
+                  <li class="meta-location">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <a href="#">Cambodia</a>
+                  </li>
+                  <li class="meta-category">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                    <a href="#">Education</a>
+                  </li>
+                </ul>
+                <h4><a href="#">Jobs for Cambodian Youth 2017</a></h4>
+                <div class="goal-process">
+                  <div class="raised"><strong>$2,435</strong> Raised of</div>
+                  <div class="goal"><strong>$9,999</strong> Goal</div>
+                  <progress class="progress progress-success progress-animated" value="25" max="100"></progress>
+
+                  <div class="goal-meta row">
+                    <div class="donors col-sm-4 text-xs-center"><strong>14</strong> donations</div>
+                    <div class="expired col-sm-4 text-xs-center"><strong>15</strong> days left</div>
+                    <div class="remained col-sm-4 text-xs-center"><strong>$7,564</strong> to go</div>
+                  </div> <!-- .row -->
+                </div> <!-- .goal-progress -->
+                <a href="#" class="btn btn-primary btn-block">Donate</a>
+              </div>
+            </div> <!-- .post-thumbnail-wrap -->
+          </article> <!-- .related-post -->
+
+        </div><!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .related-posts -->
+  </div> <!-- #content -->
+
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <%= require('html-loader!./partials/footer/footer-widgets.html') %>
+      <%= require('html-loader!./partials/footer/footer-bottom.html') %>
+    </div> <!-- .footer-inner -->
+  </footer> <!-- #footer -->
+
+  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+
+</div> <!-- #pager -->
+
+  <%= require('html-loader!./partials/signin-modal.html') %>
+  <%= require('html-loader!./partials/signup-modal.html') %>
+
+</body>
+</html>

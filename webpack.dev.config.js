@@ -6,7 +6,7 @@ var PRODUCTION = process.env.NODE_ENV === 'production'; // injecting your Node.j
 var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     'tether',
     'font-awesome-loader',
@@ -58,9 +58,9 @@ module.exports = {
       'window.Tether': 'tether'
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
-      title: 'About page',
-      filename: 'about.html',
-      template: 'src/default.html'
+      title: 'Project page',
+      filename: 'project.html',
+      template: 'src/project.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
