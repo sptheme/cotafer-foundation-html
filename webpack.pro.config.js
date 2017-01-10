@@ -43,6 +43,7 @@ module.exports = {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         query: {
+          emitFile: false,
           name: '[name].[ext]',
           publicPath: 'fonts/',
           outputPath: path.resolve(__dirname, 'public/fonts') // Not working file-loader v0.9.0
@@ -52,6 +53,7 @@ module.exports = {
         test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
         loader: 'file-loader',
         query: {
+          emitFile: false,
           name: '[name].[ext]',
           publicPath: 'fonts/',
           outputPath: path.resolve(__dirname, 'public/fonts') // Not working file-loader v0.9.0
@@ -61,6 +63,7 @@ module.exports = {
         test: /\.(jpg|png)$/,
         loader: 'file-loader',
         query: {
+          emitFile: false,
           name: '[name].[ext]',
           publicPath: 'images/',
           outputPath: path.resolve(__dirname, 'public/images') // Not working file-loader v0.9.0

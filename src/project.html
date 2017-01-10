@@ -64,6 +64,8 @@
               </div> <!-- .entry -->
             </article> <!-- .project-single-article -->
 
+            <%= require('html-loader!./partials/social-share.html') %>
+
           </main> <!-- #main -->
         </div> <!-- #primary -->
 
@@ -128,9 +130,9 @@
           <span class="text">Related Projects</span>
         </div> <!-- .theme-heading -->
         <div class="row">
-          <%= require('html-loader!./partials/related-post.html') %>
-          <%= require('html-loader!./partials/related-post.html') %>
-          <%= require('html-loader!./partials/related-post.html') %>
+          <%= require('html-loader!./partials/project/related-project.html') %>
+          <%= require('html-loader!./partials/project/related-project.html') %>
+          <%= require('html-loader!./partials/project/related-project.html') %>
         </div><!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .related-posts -->

@@ -33,6 +33,7 @@ Version: 1.0.0
   ## Organization communication line
   ## Contact person
   ## Post Thumbnail
+  ## Social Sharing (Minimal (default), Flat & 3D)
 
 
 # DEVELOMENT
@@ -238,8 +239,8 @@ body.full-screen .site-content .container {
 --------------------------------------------------------------*/
 .widget {
   border: 1px solid rgba($gray, 0.3);
-  padding: 1em;
-  margin: 0 0 2em;
+  padding: $spacer;
+  margin: 0 0 ($spacer * 2);
 }
 
 .widget .widget-title {
@@ -792,6 +793,177 @@ ul.meta {
   }
 
 }
+
+/*--------------------------------------------------------------
+## Social Sharing
+--------------------------------------------------------------*/
+.social-sharing {
+  list-style: none;
+  padding-left:0;
+
+  .social-share-btn-text {
+    font-size: 13px;
+  }
+  li,
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+/* Social Sharing > Horizontal */
+.social-sharing.position-horizontal {
+  margin: 0 0 ($spacer * 2);
+  overflow: hidden;
+  li {
+    float: left;
+    margin: 0 5px 5px 0;
+    border: none;
+  }
+  li a {
+    color: #999;
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e4e4e4;
+    font-weight: normal;
+  }
+  li .fa {
+    margin-right: 5px;
+  }
+}
+
+/* Social Sharing > Style > Minimal (default) */
+.social-sharing {
+  li a {
+    color: #999;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    text-align: center;
+    font-size: 1.077em;
+    transition: all .15s ease-in-out;
+  }
+  li a:hover {
+    background: #f7f7f7;
+  }
+  li.share-twitter a:hover {
+    color: #00aced;
+  }
+  li.share-facebook a:hover {
+    color: #3b5998;
+  }
+  li.share-pinterest a:hover {
+    color: #cb2027;
+  }
+  li.share-googleplus a:hover {
+    color: #dd4b39;
+  }
+  li.share-linkedin a:hover {
+    color: #4875B4;
+  }
+}
+
+/* Social Sharing > Flat */
+.social-sharing.style-flat {
+  li {
+    margin-bottom: 3px;
+  }
+  li a {
+    color: #fff !important;
+    border: none !important;
+    border-radius: 2px;
+  }
+  li li:first-child {
+    border: none;
+  }
+  li.share-twitter a {
+    background: #00aced;
+  }
+  li.share-twitter a:hover {
+    background: #0093cb;
+  }
+  li.share-facebook a {
+    background: #3b5998;
+  }
+  li.share-facebook a:hover {
+    background: #324b80;
+  }
+  li.share-pinterest a {
+    background: #cb2027;
+  }
+  li.share-pinterest a:hover {
+    background: #ae1b21;
+  }
+  li.share-googleplus a {
+    background: #dd4b39;
+  }
+  li.share-googleplus a:hover {
+    background: #d03724;
+  }
+  li.share-linkedin a {
+    background: #4875B4;
+  }
+  li.share-linkedin a:hover {
+    background: #3e659c;
+  }
+}
+
+/* Social Sharing > 3D */
+.social-sharing.style-three-d{
+  li {
+    margin-bottom: 3px;
+  }
+  li a {
+    color: #fff !important;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+  }
+  li a:active {
+    border-bottom-color: transparent;
+  }
+  li li:first-child {
+    border: none;
+  }
+  li.share-twitter a {
+    background: #00aced;
+  }
+  li.share-twitter a:hover {
+    background: #0093cb;
+  }
+  li.share-facebook a {
+    background: #3b5998;
+  }
+  li.share-facebook a:hover {
+    background: #324b80;
+  }
+  li.share-pinterest a {
+    background: #cb2027;
+  }
+  li.share-pinterest a:hover {
+    background: #ae1b21;
+  }
+  li.share-googleplus a {
+    background: #dd4b39;
+  }
+  li.share-googleplus a:hover {
+    background: #d03724;
+  }
+  li.share-linkedin a {
+    background: #4875B4;
+  }
+  li.share-linkedin a:hover {
+    background: #3e659c;
+  }
+}
+
 
 
 
