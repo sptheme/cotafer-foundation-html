@@ -58,9 +58,9 @@ module.exports = {
       'window.Tether': 'tether'
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
-      title: 'Project page',
-      filename: 'project.html',
-      template: 'src/project.html'
+      title: 'Eelements page',
+      filename: 'elements.html',
+      template: 'src/elements.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),

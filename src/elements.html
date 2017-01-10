@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./partials/meta-tag.html') %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%= require('html-loader!./partials/g-fonts.html') %>
+</head>
+<body>
+
+<div id="pager">
+
+  <header id="header" class="site-header masthead">
+    <div class="site-header-inner navbar">
+      <%= require('html-loader!./partials/header/header-menu-mobile-icon.html') %>
+      <%= require('html-loader!./partials/header/header-logo.html') %>
+      <%= require('html-loader!./partials/header/header-menu.html') %>
+      <%= require('html-loader!./partials/header/header-site-tools.html') %>
+    </div> <!-- .site-header-inner -->
+  </header> <!-- #header -->
+
+  <div id="content" class="site-content">
+    <div class="container">
+
+
+        <section class="project-items-wrapper">
+          <div class="theme-heading">
+            <span class="text">Project items</span>
+          </div> <!-- .theme-heading -->
+
+          <div class="row">
+
+            <article class="project-item col-lg-4">
+              <div class="post-thumbnail-wrap effect-sadie">
+                <img src="images/related-project-1.jpg">
+                <div class="caption-wrap">
+                  <h4>Empower and Educate 100 Cambodian girls and boys</h4>
+                  <p><a href="#" class="btn btn-primary">Donate</a></p>
+                  <a href="#" class="cover-link">Learn more</a>
+                </div> <!-- .caption-wrap -->
+              </div> <!-- .post-thumbnail-wrap -->
+            </article> <!-- .project-item -->
+
+          </div> <!-- .row -->
+
+          <div class="row">
+
+            <article class="related-post col-lg-4">
+              <div class="post-thumbnail-wrap  effect-none">
+                <img src="images/related-project-1.jpg" class="img-fluid">
+                <div class="caption-wrap">
+                  <ul class="meta">
+                    <li class="meta-location">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <a href="#">Cambodia</a>
+                    </li>
+                    <li class="meta-category">
+                      <i class="fa fa-folder-o" aria-hidden="true"></i>
+                      <a href="#">Women and Girls</a>
+                    </li>
+                  </ul>
+                  <h4><a href="#">Empower and Educate 100 Cambodian girls and boys</a></h4>
+                  <div class="goal-process">
+                    <div class="raised"><strong>$1,510</strong> Raised of</div>
+                    <div class="goal"><strong>$4,500</strong> Goal</div>
+                    <progress class="progress progress-success progress-animated" value="75" max="100"></progress>
+
+                    <div class="goal-meta row">
+                      <div class="donors col-sm-4 text-xs-center"><strong>25</strong> donations</div>
+                      <div class="expired col-sm-4 text-xs-center"><strong>12</strong> days left</div>
+                      <div class="remained col-sm-4 text-xs-center"><strong>$2,990</strong> to go</div>
+                    </div> <!-- .row -->
+                  </div> <!-- .goal-progress -->
+                  <p>Sadie never took her eyes off me. </p>
+                  <a href="#" class="btn btn-primary btn-block">Donate</a>
+                </div>
+              </div> <!-- .post-thumbnail-wrap -->
+            </article> <!-- .related-post -->
+
+          </div> <!-- .row -->
+
+        </section> <!-- project-items-wrapper -->
+
+    </div> <!-- .container -->
+  </div> <!-- #content -->
+
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <%= require('html-loader!./partials/footer/footer-widgets.html') %>
+      <%= require('html-loader!./partials/footer/footer-bottom.html') %>
+    </div> <!-- .footer-inner -->
+  </footer> <!-- #footer -->
+
+  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+
+</div> <!-- #pager -->
+
+  <%= require('html-loader!./partials/signin-modal.html') %>
+  <%= require('html-loader!./partials/signup-modal.html') %>
+
+</body>
+</html>
