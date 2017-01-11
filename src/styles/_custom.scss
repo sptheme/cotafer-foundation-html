@@ -290,6 +290,11 @@ body.full-screen .site-content .container {
   margin: 0 0 5px;
 }
 
+/* Custom vertical space of grid's bootstrap */
+.site-content .row+.row {
+  margin-top: 2em;
+}
+
 /*--------------------------------------------------------------
 ## Meta post
 --------------------------------------------------------------*/
@@ -790,6 +795,30 @@ ul.meta {
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    ul.meta,
+    ul.meta li a {
+      font-size: 0.875em;
+    }
+
+    h4 {
+      word-spacing: -0.15em;
+      font-weight: 300;
+    }
+
+    h4 span {
+      font-weight: 800;
+    }
+
+    h4,
+    p {
+      margin: 0;
+    }
+
+    p {
+      letter-spacing: 1px;
+      font-size: 68.5%;
+    }
   }
   .caption-wrap:before,
   .caption-wrap:after {
@@ -813,25 +842,6 @@ ul.meta {
     font-size: 0;
     opacity: 0;
   }
-
-  .caption-wrap h4 {
-    word-spacing: -0.15em;
-    font-weight: 300;
-  }
-
-  .caption-wrap h4 span {
-    font-weight: 800;
-  }
-
-  .caption-wrap h4,
-  .caption-wrap p {
-    margin: 0;
-  }
-
-  .caption-wrap p {
-    letter-spacing: 1px;
-    font-size: 68.5%;
-  }
 }
 
 @media (min-width: 992px) {
@@ -844,6 +854,7 @@ ul.meta {
 
 /* Post thumbnail > effect > none */
 .post-thumbnail-wrap.effect-none {
+  background: #FAFAFA;
   cursor: default;
   img {
     opacity: 1;
@@ -894,14 +905,27 @@ ul.meta {
     -webkit-transform: translate3d(0,50%,0);
     transform: translate3d(0,50%,0);
   }
+  ul.meta,
+  ul.meta li a {
+    color:#fff;
+  }
+  ul.meta {
+    position: absolute;
+    bottom: ($spacer * 4);
+    left: $spacer;
+    -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
   h4 {
     position: absolute;
     bottom: ($spacer * 2);
     left: $spacer;
     -webkit-transition: -webkit-transform 0.35s, color 0.35s;
     transition: transform 0.35s, color 0.35s;
-    -webkit-transform: translate3d(0,-50%,0);
-    transform: translate3d(0,-50%,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
 
   .caption-wrap:before,
@@ -923,6 +947,10 @@ ul.meta {
 }
 // Hover
 .post-thumbnail-wrap.effect-sadie:hover {
+  ul.meta {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-45px,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-45px,0);
+  }
   h4 {
     color: $orange;
     -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
