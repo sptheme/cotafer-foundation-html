@@ -33,6 +33,7 @@ Version: 1.0.0
   ## Organization communication line
   ## Contact person
   ## Post Thumbnail
+  ## Horizontal Card
   ## Social Sharing (Minimal (default), Flat & 3D)
 
 
@@ -271,6 +272,13 @@ body.full-screen .site-content .container {
   }
 }
 
+/* widget-project-raised */
+.widget-project-raised {
+  .goal-process progress {
+    height: 1em;
+  }
+}
+
 /*--------------------------------------------------------------
 # CONTENT
 --------------------------------------------------------------*/
@@ -286,8 +294,8 @@ body.full-screen .site-content .container {
 
 .entry-title {
   display: block;
-  font-size: 2em;
-  margin: 0 0 5px;
+  font-size: 1.125em;
+  margin: 0 0 0.5em;
 }
 
 /* Custom vertical space of grid's bootstrap */
@@ -352,16 +360,6 @@ ul.meta {
 .related-posts {
   background: #fafafa;
   padding:$spacer;
-}
-
-.related-post {
-  .goal-process,
-  ul.meta {
-    font-size: 0.875em;
-  }
-  progress {
-    height: 0.500em;
-  }
 }
 
 
@@ -710,6 +708,13 @@ ul.meta {
 .goal-process {
   margin-bottom: 1em;
 
+  .goal-process,
+  ul.meta {
+    font-size: 0.875em;
+  }
+  progress {
+    height: 0.500em;
+  }
   .raised,
   .goal {
     display: inline-block;
@@ -892,6 +897,7 @@ ul.meta {
   .caption-wrap {
     text-transform: inherit;
   }
+
   .caption-wrap:before {
     position: absolute;
     top: 0;
@@ -910,17 +916,11 @@ ul.meta {
     color:#fff;
   }
   ul.meta {
-    position: absolute;
-    bottom: ($spacer * 4);
-    left: $spacer;
-    -webkit-transition: -webkit-transform 0.35s, color 0.35s;
-    transition: transform 0.35s, color 0.35s;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    margin-bottom: 0;
   }
-  h4 {
+  header {
     position: absolute;
-    bottom: ($spacer * 2);
+    bottom: ($spacer * 1);
     left: $spacer;
     -webkit-transition: -webkit-transform 0.35s, color 0.35s;
     transition: transform 0.35s, color 0.35s;
@@ -941,20 +941,16 @@ ul.meta {
     padding: 2em;
     width: 100%;
     opacity: 0;
-    -webkit-transform: translate3d(0,10px,0);
-    transform: translate3d(0,10px,0);
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
   }
 }
 // Hover
 .post-thumbnail-wrap.effect-sadie:hover {
-  ul.meta {
-    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-45px,0);
-    transform: translate3d(0,-50%,0) translate3d(0,-45px,0);
-  }
-  h4 {
+  header {
     color: $orange;
-    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-    transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
   }
   a.btn-primary {
     background: $orange;
@@ -968,8 +964,22 @@ ul.meta {
     transform: translate3d(0,0,0);
   }
   p {
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+/*--------------------------------------------------------------
+## Horizontal Card
+--------------------------------------------------------------*/
+.horz-card {
+  ul.meta {
+    font-size: 0.813em;
+    margin-bottom: 0;
+  }
+  .horz-card-text {
+    color: $gray;
+    font-size: 0.875em;
   }
 }
 
