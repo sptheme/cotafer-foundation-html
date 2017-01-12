@@ -137,9 +137,17 @@
           <span class="text">Related Projects</span>
         </div> <!-- .theme-heading -->
         <div class="row">
-          <%= require('html-loader!./partials/project/related-project.html') %>
-          <%= require('html-loader!./partials/project/related-project.html') %>
-          <%= require('html-loader!./partials/project/related-project.html') %>
+          <article class="related-post col-lg-4">
+            <%= require('html-loader!./partials/components/thumbnail-effect-none.html') %>
+          </article> <!-- .related-post -->
+
+          <article class="related-post col-lg-4">
+            <%= require('html-loader!./partials/components/thumbnail-effect-none.html') %>
+          </article> <!-- .related-post -->
+
+          <article class="related-post col-lg-4">
+            <%= require('html-loader!./partials/components/thumbnail-effect-none.html') %>
+          </article> <!-- .related-post -->
         </div><!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .related-posts -->

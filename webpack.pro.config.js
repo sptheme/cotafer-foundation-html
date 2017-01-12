@@ -80,10 +80,15 @@ module.exports = {
       jQuery: 'jquery',
       'window.Tether': 'tether'
     }),
-    new HtmlWebpackPlugin({  // Also generate a about.html
+    new HtmlWebpackPlugin({
       title: 'Project page',
       filename: 'project.html',
       template: 'src/project.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Elements page',
+      filename: 'elements.html',
+      template: 'src/elements.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),

@@ -23,6 +23,7 @@ Version: 1.0.0
 # FOOTER
 # TEMPLATE PAGES
   ## Application - be a partner
+# CUSTOM BOOTSTRAP
 # COMPONENT
   ## Theme heading
   ## Circle number
@@ -298,11 +299,6 @@ body.full-screen .site-content .container {
   margin: 0 0 0.5em;
 }
 
-/* Custom vertical space of grid's bootstrap */
-.site-content .row+.row {
-  margin-top: 2em;
-}
-
 /*--------------------------------------------------------------
 ## Meta post
 --------------------------------------------------------------*/
@@ -430,6 +426,43 @@ ul.meta {
     font-size: 2em;
   }
 
+}
+
+/*--------------------------------------------------------------
+# CUSTOM BOOTSTRAP
+--------------------------------------------------------------*/
+/* Custom vertical space of grid's bootstrap */
+.site-content .row+.row {
+  margin-top: 2em;
+}
+
+/* Vertical margin grid */
+.row {
+  > .col,
+  > [class*="col-"] {
+    margin-bottom: 1em;
+  }
+}
+
+/* No gutters */
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .row {
+    > .col,
+    > [class*="col-"] {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
@@ -973,13 +1006,45 @@ ul.meta {
 ## Horizontal Card
 --------------------------------------------------------------*/
 .horz-card {
+  background: #F6F6F6;
+  .horz-card-content {
+    background: #FAFAFA;
+    padding: ($spacer/2) $spacer;
+    margin-left: $spacer;
+    margin-right: $spacer;
+    margin-bottom: $spacer;
+  }
   ul.meta {
     font-size: 0.813em;
     margin-bottom: 0;
   }
   .horz-card-text {
-    color: $gray;
     font-size: 0.875em;
+  }
+  .goal-process {
+    margin-bottom: 0;
+  }
+  .quick-donation-form {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .horz-card {
+    background: #FAFAFA;
+
+    .horz-card-content {
+      background:none;
+      margin:0;
+    }
+    .ul.meta,
+    .horz-card-title,
+    .horz-card-text {
+      padding-right: 1em;
+    }
+    .quick-donation-form {
+      margin-top: 0;
+    }
   }
 }
 
