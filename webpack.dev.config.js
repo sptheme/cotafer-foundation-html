@@ -8,7 +8,6 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'tether',
     'font-awesome-loader',
     'bootstrap',
     'jquery-hoverintent',
@@ -44,7 +43,7 @@ module.exports = {
       }
     },
     {
-      test: /\.(jpg|png)$/,
+      test: /\.(jpg|png|gif)$/,
       loader: 'file-loader'
     }]
   },
@@ -55,12 +54,14 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.Tether': 'tether'
+      'window.jQuery': 'jquery',
+      Tether: 'tether',
+      'window.Tether': 'tether',
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
-      title: 'Eelements page',
-      filename: 'elements.html',
-      template: 'src/elements.html'
+      title: 'Search page',
+      filename: 'search.html',
+      template: 'src/search.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),

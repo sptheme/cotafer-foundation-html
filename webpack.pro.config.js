@@ -10,7 +10,6 @@ module.exports = {
   entry: {
     theme: './src/scripts/index.js',
     vendor: [
-      'tether',
       'font-awesome-loader',
       'bootstrap',
       'jquery-hoverintent',
@@ -60,9 +59,9 @@ module.exports = {
         }
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|gif)$/,
         loader: 'file-loader',
-        query: {
+        options: {
           emitFile: false,
           name: '[name].[ext]',
           publicPath: 'images/',
@@ -78,7 +77,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.Tether': 'tether'
+      'window.jQuery': 'jquery',
+      Tether: 'tether',
+      'window.Tether': 'tether',
     }),
     new HtmlWebpackPlugin({
       title: 'Project page',
@@ -86,10 +87,15 @@ module.exports = {
       template: 'src/project.html'
     }),
     new HtmlWebpackPlugin({
+      title: 'Search page',
+      filename: 'search.html',
+      template: 'src/search.html'
+    }),
+    /*new HtmlWebpackPlugin({
       title: 'Elements page',
       filename: 'elements.html',
       template: 'src/elements.html'
-    }),
+    }),*/
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
       DEVELOPMENT: JSON.stringify(DEVELOPMENT)

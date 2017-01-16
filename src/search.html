@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./partials/meta-tag.html') %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%= require('html-loader!./partials/g-fonts.html') %>
+</head>
+<body class="left-sidebar">
+
+<div id="pager">
+
+  <header id="header" class="site-header masthead">
+    <div class="site-header-inner navbar navbar-toggleable-md">
+      <%= require('html-loader!./partials/header/header-menu-mobile-icon.html') %>
+      <%= require('html-loader!./partials/header/header-logo.html') %>
+      <%= require('html-loader!./partials/header/header-navigation.html') %>
+    </div> <!-- .site-header-inner -->
+  </header> <!-- #header -->
+
+  <div id="content" class="site-content">
+    <div class="container">
+      <div class="row">
+
+        <div id="primary" class="content-area col-md-9">
+          <main id="main" class="site-main" role="main">
+            <div class="page-header">
+              <h1 class="page-header-title">Search result</h1>
+            </div>
+            <div class="post-entries">
+              <article id="post-id-1" class="post-entry">
+                <%= require('html-loader!./partials/components/horizontal-card.html') %>
+              </article>
+              <article id="post-id-2" class="post-entry">
+                <%= require('html-loader!./partials/components/horizontal-card.html') %>
+              </article>
+              <article id="post-id-3" class="post-entry">
+                <%= require('html-loader!./partials/components/horizontal-card.html') %>
+              </article>
+            </div> <!-- .post-entries -->
+
+          </main> <!-- #main -->
+        </div> <!-- #primary -->
+
+        <aside id="secondary" class="sidebar widget-area col-md-3" role="complementary">
+          <div class="widget widget-refine-by">
+            <h4 class="widget-title">Refine by</h4>
+            <h5 class="widget-sub-title">Country</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a href="#" class="nav-link active">Africa</a> <span class="badge badge-primary">12</span></li>
+              <li class="nav-item"><a href="#" class="nav-link">Cambodia</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Vietnam</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Laos</a></li>
+              <li class="nav-item"><a href="#" class="nav-link active">India</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Nepal</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Uganda</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">United States</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Kenya</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Haiti</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Pakistan</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">South Africa</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Italy</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Greece</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Mexico</a></li>
+            </ul>
+          </div> <!-- .widget-refine-by -->
+        </aside>
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #content -->
+
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <%= require('html-loader!./partials/footer/footer-widgets.html') %>
+      <%= require('html-loader!./partials/footer/footer-bottom.html') %>
+    </div> <!-- .footer-inner -->
+  </footer> <!-- #footer -->
+
+  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+
+</div> <!-- #pager -->
+
+  <%= require('html-loader!./partials/signin-modal.html') %>
+  <%= require('html-loader!./partials/signup-modal.html') %>
+
+</body>
+</html>

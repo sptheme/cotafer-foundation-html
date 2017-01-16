@@ -11,11 +11,10 @@
 <div id="pager">
 
   <header id="header" class="site-header masthead">
-    <div class="site-header-inner navbar">
+    <div class="site-header-inner navbar navbar-toggleable-md">
       <%= require('html-loader!./partials/header/header-menu-mobile-icon.html') %>
       <%= require('html-loader!./partials/header/header-logo.html') %>
-      <%= require('html-loader!./partials/header/header-menu.html') %>
-      <%= require('html-loader!./partials/header/header-site-tools.html') %>
+      <%= require('html-loader!./partials/header/header-navigation.html') %>
     </div> <!-- .site-header-inner -->
   </header> <!-- #header -->
 
@@ -61,6 +60,8 @@
           </div> <!-- .row -->
 
           <h5 class="mt-1">Horizontal</h5>
+          <%= require('html-loader!./partials/components/horizontal-card.html') %>
+          <%= require('html-loader!./partials/components/horizontal-card.html') %>
           <%= require('html-loader!./partials/components/horizontal-card.html') %>
 
         </section> <!-- project-items-wrapper -->
