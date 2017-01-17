@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= require('html-loader!./partials/meta-tag.html') %>
+  <%= require('html-loader!./partials/header/head.html') %>
   <title><%= htmlWebpackPlugin.options.title %></title>
 
-  <%= require('html-loader!./partials/g-fonts.html') %>
+  <%= require('html-loader!./partials/header/g-fonts.html') %>
 </head>
 <body>
 
@@ -47,7 +47,7 @@
               </header><!-- .project-single-header -->
 
               <div class="post-media">
-                <img src="images/project-image.jpg" class="img-fluid">
+                <img src="<%= require('file-loader?!./images/project-image.jpg') %>" class="img-fluid">
               </div> <!-- .post-media -->
 
               <div class="theme-heading">
@@ -77,10 +77,10 @@
                 <progress class="progress progress-success progress-animated" value="75" max="100"></progress>
               </div>
 
-              <div class="goal-meta row">
-                <div class="donors col-xs-4 text-xs-center"><strong>711</strong> donations</div>
-                <div class="expired col-xs-4 text-xs-center"><strong>72</strong> days left</div>
-                <div class="remained col-xs-4 text-xs-center"><strong>$774,064</strong> to go</div>
+              <div class="goal-meta row no-gutters">
+                <div class="donors col-4 text-center"><strong>711</strong> donations</div>
+                <div class="expired col-4 text-center"><strong>72</strong> days left</div>
+                <div class="remained col-4 text-center"><strong>$774,064</strong> to go</div>
               </div> <!-- .row -->
             </div> <!-- .goal-progress -->
             <a href="#" class="btn btn-primary btn-block">Donate</a>
@@ -126,7 +126,7 @@
         <div class="theme-heading">
           <span class="text">Sharing</span>
         </div> <!-- .theme-heading -->
-        <%= require('html-loader!./partials/social-share.html') %>
+        <%= require('html-loader!./partials/components/social-share.html') %>
       </div> <!-- .container -->
     </div> <!-- .social-sharing-wrap -->
 
@@ -159,12 +159,12 @@
     </div> <!-- .footer-inner -->
   </footer> <!-- #footer -->
 
-  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+  <%= require('html-loader!./partials/components/menu-mobile-alt.html') %>
 
 </div> <!-- #pager -->
 
-  <%= require('html-loader!./partials/signin-modal.html') %>
-  <%= require('html-loader!./partials/signup-modal.html') %>
+  <%= require('html-loader!./partials/components/signin-modal.html') %>
+  <%= require('html-loader!./partials/components/signup-modal.html') %>
 
 </body>
 </html>

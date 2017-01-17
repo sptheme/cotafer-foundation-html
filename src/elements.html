@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= require('html-loader!./partials/meta-tag.html') %>
+  <%= require('html-loader!./partials/header/head.html') %>
   <title><%= htmlWebpackPlugin.options.title %></title>
 
-  <%= require('html-loader!./partials/g-fonts.html') %>
+  <%= require('html-loader!./partials/header/g-fonts.html') %>
 </head>
 <body>
 
@@ -76,12 +76,12 @@
     </div> <!-- .footer-inner -->
   </footer> <!-- #footer -->
 
-  <%= require('html-loader!./partials/menu-mobile-alt.html') %>
+  <%= require('html-loader!./partials/components/menu-mobile-alt.html') %>
 
 </div> <!-- #pager -->
 
-  <%= require('html-loader!./partials/signin-modal.html') %>
-  <%= require('html-loader!./partials/signup-modal.html') %>
+  <%= require('html-loader!./partials/components/signin-modal.html') %>
+  <%= require('html-loader!./partials/components/signup-modal.html') %>
 
 </body>
 </html>

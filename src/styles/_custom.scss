@@ -23,6 +23,7 @@ Version: 1.0.0
 # ARCHIVE
 # FOOTER
 # TEMPLATE PAGES
+  ## Search
   ## Application - be a partner
 # COMPONENT
   ## Theme heading
@@ -30,6 +31,8 @@ Version: 1.0.0
   ## Socials
   ## Mobile nav trigger
   ## Mobile menu
+  ## Advance search form
+
   ## Goal progress
   ## Organization communication line
   ## Contact person
@@ -257,11 +260,6 @@ a:focus {
     line-height: 1.5;
     font-weight: 600;
   }
-  .widget-sub-title {
-    font-size: 1.063em;
-    color: #999;
-    font-family: "Open Sans", sans-serif;
-  }
 
   /* Make sure select elements fit in widgets. */
   select {
@@ -281,8 +279,26 @@ a:focus {
 
 /* .widget-refine-by */
 .widget-refine-by {
+  .widget-title {
+    color: $gray;
+  }
+  h5.widget-sub-title {
+    margin-top: 1em;
+    font-size: 0.938em;
+    font-weight: 600;
+    color: $gray-dark;
+    font-family: "Open Sans", sans-serif;
+  }
   ul {
     font-size: 0.875em;
+  }
+  li a {
+    color: $gray-dark;
+    padding-top:0;
+    padding-bottom: 0;
+  }
+  li a:hover {
+    color:$orange;
   }
   li a:before {
     font-family: 'FontAwesome';
@@ -482,6 +498,33 @@ ul.meta {
 /*--------------------------------------------------------------
 # TEMPLATE PAGES
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Search
+--------------------------------------------------------------*/
+/* Search result info */
+.s-result-info-bar {
+  font-size: 0.813em;
+  padding: ($spacer/2) 0;
+  border-top: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  box-shadow: 0 0 10px $gray-lighter;
+
+  h3.s-result-count {
+    font-size: 1em;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 2;
+    vertical-align: bottom;
+    color: $gray-dark;
+    font-family: "Open Sans", sans-serif;
+
+    span {
+      font-size: 1.063em;
+      font-weight: 700;
+    }
+  }
+}
 
 /*--------------------------------------------------------------
 ## Application - be a partner
@@ -781,6 +824,18 @@ ul.meta {
 }
 
 /*--------------------------------------------------------------
+## Advance search form
+--------------------------------------------------------------*/
+.adv-search-wrap {
+  background: $gray-lightest;
+  padding: ($spacer*2) $spacer;
+
+  .custom-select {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
 ## Goal progress
 --------------------------------------------------------------*/
 .goal-process {
@@ -792,6 +847,7 @@ ul.meta {
   }
   progress {
     height: 0.500em;
+    width: 100%;
   }
   .raised,
   .goal {
@@ -813,6 +869,7 @@ ul.meta {
     background:rgba($gray,.3);
     padding: 0.5em;
     margin-bottom: 0.313em;
+    height: auto;
   }
   .progress {
     margin-bottom: 0;
