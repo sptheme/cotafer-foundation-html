@@ -61,11 +61,8 @@ module.exports = {
       {
         test: /\.(jpg|png|gif)$/,
         loader: 'file-loader',
-        options: {
-          emitFile: false,
-          name: '[name].[ext]',
-          publicPath: 'images/',
-          outputPath: path.resolve(__dirname, 'public/images') // Not working file-loader v0.9.0
+        query: {
+          name: 'images/[name].[ext]'
         }
       }
     ]
@@ -80,6 +77,11 @@ module.exports = {
       'window.jQuery': 'jquery',
       Tether: 'tether',
       'window.Tether': 'tether',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Homepage',
+      filename: 'index.html',
+      template: 'src/default.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Project page',
