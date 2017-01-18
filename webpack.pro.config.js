@@ -18,7 +18,8 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'public/'),
+    path: path.join(__dirname, 'public/assets/'),
+    publicPath: 'assets/',
     filename: 'js/[name].min.js'
   },
 
@@ -58,10 +59,6 @@ module.exports = {
         query: {
           name: 'images/[name].[ext]'
         }
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       }
     ]
   },
