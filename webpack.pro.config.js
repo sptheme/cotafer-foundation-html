@@ -58,6 +58,10 @@ module.exports = {
         query: {
           name: 'images/[name].[ext]'
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },
