@@ -18,15 +18,14 @@ module.exports = {
     './src/scripts/index.js'
   ],
   output: {
-    path: path.resolve(__dirname, 'public/'), // the target directory for all output files
+    path: path.join(__dirname, 'public/'), // the target directory for all output files
     filename: 'js/theme.min.js'
   },
 
   module: {
     loaders: [{
       test: /\.scss$/,
-      loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
-      include: path.resolve(__dirname, "src/styles")
+      loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],      
     }, {
       test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //loader: 'url-loader?limit=10000',
@@ -44,7 +43,7 @@ module.exports = {
     },
     {
       test: /\.(jpg|png|gif)$/,
-      loader: 'file-loader'
+      loader: 'file-loader',      
     },]
   },
 
@@ -57,11 +56,6 @@ module.exports = {
       'window.jQuery': 'jquery',
       Tether: 'tether',
       'window.Tether': 'tether',
-    }),
-    new HtmlWebpackPlugin({  // Also generate a about.html
-      title: 'Search page',
-      filename: 'search.html',
-      template: 'src/search.html'
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
       title: 'Project page',

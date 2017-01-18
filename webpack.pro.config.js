@@ -75,17 +75,17 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Homepage',
-      filename: 'index.html',
+      filename: '../index.html',
       template: 'src/default.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Project page',
-      filename: 'project.html',
+      filename: '../project.html',
       template: 'src/project.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Search page',
-      filename: 'search.html',
+      filename: '../search.html',
       template: 'src/search.html'
     }),
     /*new HtmlWebpackPlugin({
