@@ -98,6 +98,7 @@ $(function() {
         name: 'sidr-mobile-menu',
         source: '#mobile-menu-alternative',
         side: 'left',
+        renaming: false,
         speed: 300,
         onOpen: function() {
           // Add dark overlay to content

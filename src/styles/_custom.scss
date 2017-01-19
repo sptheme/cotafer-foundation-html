@@ -787,7 +787,7 @@ ul.meta {
   }
 
   a:hover,
-  .sidr-class-active a {
+  a.active {
     color:#fff;
     text-decoration: none;
   }
@@ -806,6 +806,9 @@ ul.meta {
   }
   ul:last-child {
     border: none
+  }
+  .fa {
+    margin-right: ($spacer/2);
   }
 }
 
