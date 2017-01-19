@@ -35,7 +35,7 @@ module.exports = {
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
           loader: 'css-loader?minimize!sass-loader',
-          publicPath: 'css/'
+          publicPath: '../'
         }),
         include: path.resolve(__dirname, "src/styles/")
       },

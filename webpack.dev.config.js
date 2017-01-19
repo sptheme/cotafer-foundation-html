@@ -6,7 +6,7 @@ var PRODUCTION = process.env.NODE_ENV === 'production'; // injecting your Node.j
 var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   entry: [
     'font-awesome-loader',
     'bootstrap',
@@ -25,7 +25,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.scss$/,
-      loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],      
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],      
     }, {
       test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //loader: 'url-loader?limit=10000',
@@ -43,8 +43,8 @@ module.exports = {
     },
     {
       test: /\.(jpg|png|gif)$/,
-      loader: 'file-loader',      
-    },]
+      loader: 'file-loader'      
+    }]
   },
 
   plugins: [

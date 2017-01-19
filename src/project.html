@@ -46,21 +46,13 @@
                 </ul> <!-- .meta -->
               </header><!-- .project-single-header -->
 
-              <div class="post-media">
-                <img src="assets/images/project-image.jpg" class="img-fluid">                
-              </div> <!-- .post-media -->
+              <%= require('html-loader!./partials/projects/project-single-media.html') %>
 
               <div class="theme-heading">
                 <span class="text">Story</span>
               </div> <!-- .theme-heading -->
-
-              <div class="single-post-content">
-                <p>Abigail and Rusty are inseparable. Olivia needs to escape abuse from her husband in Poland and flee home to the USA. She doesn't have enough money to get them all home and leaving Rusty behind would break Abigail's heart. With your support we can get Olivia, Abigail and Rusty together.</p>
-                <h5>Challenge</h5>
-                <p>American women fleeing abuse with their children and pets rarely have access to the funds they need to escape home. With this project we will be able to fly Olivia home with Abigail and Rusty.</p>
-                <h5>Solution</h5>
-                <p>We will be able to purchase airline tickets to get Abigail and Olivia home and the necessary vet certifications and fees to bring Rusty home with them. As with most American women, children and pets fleeing home for safety, they will be able to live with Olivia's parents in the USA.</p>
-              </div> <!-- .entry -->
+              <%= require('html-loader!./partials/projects/project-single-content.html') %>
+              
             </article> <!-- .project-single-article -->
 
           </main> <!-- #main -->
@@ -86,34 +78,9 @@
             <a href="#" class="btn btn-primary btn-block">Donate</a>
           </div> <!-- .widget -->
 
-          <div class="widget widget-funded-project">
-            <h4 class="widget-title">Funded Project!</h4>
-            <div class="text-xs-center">
-              <img src="images/fully-funded.png">
-              <p>Combined with other sources of funding, this project raised enough money to fund the outlined activities and is no longer accepting donations.</p>
-            </div>
-          </div> <!-- .widget -->
+          <%= require('html-loader!./partials/widgets/widget-funded-project.html') %>
 
-          <div class="widget widget-org-comm">
-            <h4 class="widget-title">Organiztion Information</h4>
-            <div class="org-comm">
-              <h5 class="org-name"><a href="#">Cotafer Foundation</a></h5>
-              <ul>
-                <li><span class="attr">Location:</span> Phnom Penh - CAMBODIA</li>
-                <li><span class="attr">Website:</span> <a href="http://www.kasumisou.com" target="_blank">http://www.cotafer-foundation.com</a></li>
-              </ul>
-            </div>
-            <div class="contact-person row">
-              <div class="col-sm-2 col-md-3">
-                <a href="#"><img class="img-fluid" src="images/project-leader.jpg"></a>
-              </div>
-              <div class="col-sm-10 col-md-9">
-                <h6 class="project-leader">Project Leader</h6>
-                <strong>Britt Lake</strong>
-                <address>Phnom Penh. Cambodia</address>
-              </div>
-            </div><!-- .row -->
-          </div> <!-- .widget -->
+          <%= require('html-loader!./partials/widgets/widget-organization-info.html') %>
 
         </aside> <!-- .widget-area -->
 
