@@ -106,7 +106,7 @@ $(function() {
           $( '.sidr-overlay' ).fadeIn( 300 );
 
           // Close sidr when clicking on overlay, signin or signup
-          $( '.sidr-overlay, #sidr-id-signin-menu-mobile-alt, #sidr-id-signup-menu-mobile-alt' ).on( 'click', function( event ) {
+          $( '.sidr-overlay, #signin-menu-mobile-alt, #signup-menu-mobile-alt' ).on( 'click', function( event ) {
             event.preventDefault();
             $.sidr( 'close', 'sidr-mobile-menu' );
           } );
