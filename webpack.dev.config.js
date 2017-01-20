@@ -59,8 +59,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
       title: 'Project page',
-      filename: 'project.html',
-      template: 'src/project.html'
+      filename: 'search.html',
+      template: 'src/search.html'
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(PRODUCTION),
