@@ -25,7 +25,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.scss$/,
-      loaders: ['style-loader', 'css-loader', 'sass-loader'],      
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
     }, {
       test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //loader: 'url-loader?limit=10000',
@@ -43,13 +43,13 @@ module.exports = {
     },
     {
       test: /\.(jpg|png|gif)$/,
-      loader: 'file-loader'      
+      loader: 'file-loader'
     }]
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -58,7 +58,7 @@ module.exports = {
       'window.Tether': 'tether',
     }),
     new HtmlWebpackPlugin({  // Also generate a about.html
-      title: 'Project page',
+      title: 'Search page',
       filename: 'search.html',
       template: 'src/search.html'
     }),

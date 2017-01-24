@@ -39,8 +39,8 @@ $(function() {
         // User modal switcher
         self.userModalSwitcher();
 
-        // User modal in mobile menu
-        //self.userModalMobile();
+        // Refine By panel
+        self.reineByPanel();
 
       });
 
@@ -148,6 +148,42 @@ $(function() {
           $('#signup-modal').modal('toggle');
         });
       }
+    },
+
+    reineByPanel: function(){
+      var numItemShow = 5,
+      widgetRefineBy = $('.widget-refine-by');
+      defaultItemHeight = widgetRefineBy.find('.nav-item').outerHeight() * numItemShow;
+
+      // inject HTML markup
+      $('.expanding-panel').each(function(){
+        var linkText = $(this).attr('data-link-text'),
+        content = $(this).html();
+
+        if (numItemShow < $(this).find('.nav-item').length) {
+          $(this).html('<div class="expanding-panel-content-container" style="height:'+defaultItemHeight+'px;"><div class="expanding-panel-content">'+content+'</div></div>');
+          $(this).append('<div class="expanding-panel-trigger">'+linkText+'</div>');
+        }
+      });
+
+      // Active panel
+      $('.expanding-panel .expanding-panel-trigger').on('click', function(){
+        var newHeight = null,
+        selectedPanel = $(this).closest('.expanding-panel'),
+        selectedContent = selectedPanel.find('.expanding-panel-content-container');
+
+        selectedPanel.toggleClass('open');
+        if(selectedPanel.hasClass('open')) {
+          newHeight = selectedPanel.find('.expanding-panel-content').outerHeight(true);
+        }else {
+          newHeight = defaultItemHeight;
+        }
+        selectedContent.animate({'height': newHeight+'px'},600,function(){
+          if(newHeight != defaultItemHeight ) {
+            $(this).removeAttr('style');
+          }
+        });
+      });
     }
 
   }

@@ -32,13 +32,13 @@ Version: 1.0.0
   ## Mobile nav trigger
   ## Mobile menu
   ## Advance search form
-
   ## Goal progress
   ## Organization communication line
   ## Contact person
   ## Post Thumbnail
   ## Horizontal Card
   ## Social Sharing (Minimal (default), Flat & 3D)
+  ## Expanding panel
 
 
 # DEVELOMENT
@@ -247,6 +247,7 @@ a:focus {
 # WIDGETS
 --------------------------------------------------------------*/
 .widget {
+  border-radius: $border-radius-lg;
   border: 1px solid rgba($gray, 0.3);
   padding: $spacer;
   margin: 0 0 ($spacer * 2);
@@ -277,6 +278,7 @@ a:focus {
 .widget-refine-by {
   .widget-title {
     color: $gray;
+    font-family: "Open Sans", sans-serif;
   }
   h5.widget-sub-title {
     margin-top: 1em;
@@ -327,12 +329,10 @@ a:focus {
 .site-content {
   padding: 1em 0;
 
-  /* Custom vertical space of grid's bootstrap */
-  .row+.row {
+  /* .row+.row {
     margin-top: 2em;
   }
 
-  /* Vertical margin grid */
   .row {
     > .col,
     > [class*="col-"] {
@@ -347,7 +347,7 @@ a:focus {
         margin-bottom: 0;
       }
     }
-  }
+  } */
 }
 
 .main {
@@ -426,16 +426,13 @@ ul.meta {
 --------------------------------------------------------------*/
 .post-entries {
   .post-entry {
-    padding: ($spacer/2) 0;
+    padding: ($spacer/2);
+    margin-bottom: $spacer;
+    border: 1px solid #F6F6F6;
+    border-radius: $border-radius-lg;
   }
-}
-
-@media (min-width: 992px) {
-  .post-entries {
-    .post-entry {
-      padding: $spacer 0;
-      border-bottom: 1px solid #F6F6F6;
-    }
+  .goal-process {
+    font-size: 85%;
   }
 }
 
@@ -981,15 +978,14 @@ ul.meta {
     font-size: 0;
     opacity: 0;
   }
-}
-
-@media (min-width: 992px) {
-  .post-thumbnail-wrap {
+  @media (min-width: 992px) {
     .caption-wrap h4 {
       font-size: 1em;
     }
   }
 }
+
+
 
 /* Post thumbnail > effect > none */
 .post-thumbnail-wrap.effect-none {
@@ -1107,9 +1103,8 @@ ul.meta {
 ## Horizontal Card
 --------------------------------------------------------------*/
 .horz-card {
-  background: #F6F6F6;
+
   .horz-card-content {
-    background: #FAFAFA;
     padding: ($spacer/2) $spacer;
     margin-left: $spacer;
     margin-right: $spacer;
@@ -1128,20 +1123,17 @@ ul.meta {
   .quick-donation-form {
     margin-top: 1em;
   }
-}
-
-@media (min-width: 768px) {
-  .horz-card {
-    background: none;
-
+  @media (min-width: 768px) {
     .horz-card-content {
-      background:none;
       margin:0;
     }
     .ul.meta,
     .horz-card-title,
     .horz-card-text {
       padding-right: 1em;
+    }
+    .horz-card-text {
+      margin-bottom: 0;
     }
     .goal-process .raised strong,
     .goal-process .goal strong {
@@ -1317,6 +1309,33 @@ ul.meta {
   }
   li.share-linkedin a:hover {
     background: #3e659c;
+  }
+}
+
+/*--------------------------------------------------------------
+## Expanding panel
+--------------------------------------------------------------*/
+.expanding-panel {
+  .expanding-panel-content-container {
+    overflow: hidden;
+  }
+  .expanding-panel-trigger {
+    cursor: pointer;
+    color: $gray;
+    font-size: 85%;
+    font-weight: 600;
+    user-select:none;
+  }
+  .expanding-panel-trigger:hover {
+    color:$gray-dark;
+  }
+  .expanding-panel-trigger::before {
+    content: '+ ';
+  }
+}
+.expanding-panel.open {
+  .expanding-panel-trigger::before {
+    content: '\2013 ';
   }
 }
 

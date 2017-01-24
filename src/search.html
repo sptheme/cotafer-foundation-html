@@ -23,10 +23,10 @@
       <form id="adv-search-form">
         <div class="form-group mb-0 row">
           <div class="col-sm-12 col-md-6">
-            <input type="text" class="form-control mb-sm-1" name="s" placeholder="Enter keywords (optional)">
+            <input type="text" class="form-control mb-1 mb-lg-0" name="s" placeholder="Enter keywords (optional)">
           </div>
           <div class="col-sm-6 col-md-2">
-            <select class="custom-select mb-sm-1" id="searchByCountry">
+            <select class="custom-select mb-1 mb-lg-0" id="searchByCountry">
               <option selected>All Countries</option>
               <option value="1">Cambodia</option>
               <option value="2">Thailand</option>
@@ -35,7 +35,7 @@
             </select>
           </div>
           <div class="col-sm-6 col-md-2">
-            <select class="custom-select mb-sm-1" id="searchByCategory">
+            <select class="custom-select mb-1 mb-lg-0" id="searchByCategory">
               <option selected>All Categories</option>
               <option value="1">Education</option>
               <option value="2">Sports</option>
@@ -54,12 +54,12 @@
   <div class="s-result-info-bar">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 col-md-8">
+        <div class="col-12 col-sm-8">
           <h3 class="s-result-count">1-24 of 1,325 results for <span>Save children</span></h3>
         </div> <!-- .col -->
-        <div class="col-sm-12 col-md-4">
+        <div class="col-12 col-sm-4">
           <form id="searchShortForm" class="form-inline justify-content-md-end mt-sm-1">
-            <label class="mr-sm-2" for="sort">Sort by</label>
+            <label class="mr-sm-2 hidden-sm-down" for="sort">Sort by</label>
             <select class="form-control form-control-sm" id="sort">
               <option selected>Relevance</option>
               <option value="1">Closeness to goal (high to low)</option>
@@ -116,24 +116,28 @@
           <div class="widget widget-refine-by">
             <h4 class="widget-title">Refine by</h4>
             <h5 class="widget-sub-title">Category</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item"><a href="#" class="nav-link active">Children <span class="badge badge-primary float-right mt-1">12</span></a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Education</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Women and Girls</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Health</a></li>
-              <li class="nav-item"><a href="#" class="nav-link active">Human Rights</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Disaster Recovery</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Economic Development</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Environment</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Animals</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Hunger</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Sport</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Technology</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Arts and Culture</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Climate Change</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Microfinance</a></li>
-            </ul> <!-- .nav -->
+            <div class="expanding-panel" data-link-text="Show more categories">
+              <ul class="nav flex-column">
+                <li class="nav-item"><a href="#" class="nav-link active">Children <span class="badge badge-primary float-right mt-1">12</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Women and Girls</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Health</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">Human Rights</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Disaster Recovery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Economic Development</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Environment</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Animals</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Hunger</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sport</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Technology</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Arts and Culture</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Climate Change</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Microfinance</a></li>
+              </ul> <!-- .nav -->
+            </div> <!-- .expanding-panel -->
+
             <h5 class="widget-sub-title">Country</h5>
+            <div class="expanding-panel" data-link-text="Show more countries">
             <ul class="nav flex-column">
               <li class="nav-item"><a href="#" class="nav-link">Cambodia</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Vietnam</a></li>
@@ -150,13 +154,18 @@
               <li class="nav-item"><a href="#" class="nav-link">Greece</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Mexico</a></li>
             </ul> <!-- .nav -->
+            </div> <!-- .expanding-panel -->
+
             <h5 class="widget-sub-title">Recently Updated</h5>
+            <div class="expanding-panel" data-link-text="Show more updated">
             <ul class="nav flex-column">
               <li class="nav-item"><a href="#" class="nav-link">Last week</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Last month</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Last 3 months</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Longer than 3 months</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Last 6 months</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Longer than 6 months</a></li>
             </ul> <!-- .nav -->
+            </div> <!-- .expanding-panel -->
           </div> <!-- .widget-refine-by -->
         </aside>
 
