@@ -19,7 +19,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'public/'), // the target directory for all output files
-    filename: 'js/theme.min.js'
+    filename: 'theme.js'
   },
 
   module: {
@@ -42,7 +42,7 @@ module.exports = {
       }
     },
     {
-      test: /\.(jpg|png|gif)$/,
+      test: /\.(png|jpe?g|gif|svg|ico)$/,
       loader: 'file-loader'
     }]
   },

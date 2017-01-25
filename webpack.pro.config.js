@@ -47,14 +47,14 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        test: /\.(ttf|eot)(\?[\s\S]+)?$/,
         loader: 'file-loader',
         query: {
           name: 'fonts/[name].[ext]'
         }
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         loader: 'file-loader',
         query: {
           name: 'images/[name].[ext]'

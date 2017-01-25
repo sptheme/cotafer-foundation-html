@@ -154,7 +154,6 @@ $(function() {
       var numItemShow = 5,
       widgetRefineBy = $('.widget-refine-by');
       defaultItemHeight = widgetRefineBy.find('.nav-item').outerHeight() * numItemShow;
-
       // inject HTML markup
       $('.expanding-panel').each(function(){
         var linkText = $(this).attr('data-link-text'),
